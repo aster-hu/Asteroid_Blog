@@ -1,8 +1,5 @@
 project:
   type: website
-  render:
-    - "*.qmd"
-    - "*.md"
 
 website:
   title: "Aster Hu's Blog | Asteroid"
@@ -26,7 +23,7 @@ website:
     pinned: true
     left: 
       - text: "learning · programming · arts · random thoughts"
-        href: about/index.qmd
+        href: /
     right:
       - text: About 
         href: about/index.qmd
