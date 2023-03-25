@@ -1,8 +1,8 @@
 # Aster Hu's Blog | Asteroid
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1d3a76d5-75ff-433a-9edd-ea6f02d5d930/deploy-status)](https://app.netlify.com/sites/asterhu/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/084ba0a5-4120-4f4e-85fa-0b8123e49c3f/deploy-status)](https://app.netlify.com/sites/phenomenal-elf/deploys)
 
-![lastupdate](https://img.shields.io/github/last-commit/aster-hu/Quarto_Blog?color=turquoise&label=updated)
+![lastupdate](https://img.shields.io/github/last-commit/aster-hu/Asteroid_Blog?color=turquoise&label=updated)
 
 This is the repository to host the Markdown source files of [my personal website](https://asterhu.com). The website is built via [Quarto](http://quarto.org) and I tweaked a bit to suit my needs.
 

@@ -2,10 +2,10 @@
 title: "Set up a clean python environment for ARM-based Mac in 2023"
 date: 2023-02-21
 categories: [2023, tutorial, python, macos, environment]
+description: "Avoid homebrew and embrance Anaconda! It will save you so much time trying to figure out which version has been used."
 ---
 
-![dan-gold-unsplash](dan-gold-NneNzn0vs44-unsplash.jpg)
-*Photo by <a href="https://unsplash.com/@danielcgold?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Gold</a> on <a href="https://unsplash.com/photos/NneNzn0vs44?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*
+![Photo by <a href="https://unsplash.com/@danielcgold?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Gold</a> on <a href="https://unsplash.com/photos/NneNzn0vs44?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>](dan-gold-NneNzn0vs44-unsplash.jpg)
   
 ARM-based Mac, or Apple Silicon, comes with the powerful M1/M2 chip. Since then, things have changed a lot therefore I'm writing this article to replace [the old blog post](../2020-02-04-setup-python-in-MacOS/index.qmd) for macOS Monterey 12.3 and later.
 
@@ -95,7 +95,7 @@ I didn't create a new conda environment because I only use one, which is the `ba
 
 Occasionally, you may still encounter some packages that are not available in conda and can only be installed via other managers such as `pip` or `brew`, and that's okay. Pip is supported within conda, and the Anaconda documentation has an article talks about the best practices of [Using Pip in a Conda Environment](https://www.anaconda.com/blog/using-pip-in-a-conda-environment). However it is a relatively advanced topic. For most data analysis job, conda should be enough to satisfy our need.
 
-# Reference
+#### Reference
 
 - [Will macOS Big Sur remove the default Python installation for good?](https://apple.stackexchange.com/questions/406244/will-macos-big-sur-remove-the-default-python-installation-for-good)
 - [Anaconda Using Pip in a Conda Environment](https://www.anaconda.com/blog/using-pip-in-a-conda-environment)
