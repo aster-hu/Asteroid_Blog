@@ -1,0 +1,129 @@
+//** The following is from
+//** https://github.com/ivelasq/pipedream/blob/main/styles.scss
+
+/*-- scss:defaults --*/
+
+$darkpink:         #d68181 !default;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Merriweather&family=Righteous&display=swap');
+
+$font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Inter" !default;
+$font-family-serif:       "Merriweather" !default;
+$font-size-base:              0.9rem !default;
+
+// Nav bar
+
+.li.a.dropdown-item {
+  color: "#2B2423";
+}
+
+.dropdown-text {
+  color: "#FFFFFF";
+}
+
+// Typography
+
+//** Global textual link color.
+$link-color:            $darkpink !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link decoration.
+$link-decoration: none;
+$link-hover-decoration: none;
+
+$code-block-bg: #faf9f9;
+$code-block-border-left: #31BAE9;
+
+
+h1.title {
+  font-family: "Merriweather";
+  font-size: 2em;
+	color: $darkpink;
+}
+
+h1.title.display-7 {
+  font-family: "Merriweather";
+}
+
+p.subtitle.lead {
+  text-align: left;
+}
+
+.navbar {
+  color: #FFFFFF;
+}
+
+.navbar-title {
+  color: #FFFFFF;
+  font-size: 120%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar-left-text {
+  color: #FFFFFF;
+}
+
+a.sidebar-item-text.sidebar-link {
+    color: #FFFFFF;
+}
+
+.navbar li.dropdown-header {
+  text-transform: none;
+}
+
+.quarto-listing-category-title {
+    font-family: "Merriweather";
+}
+
+.quarto-post .body h3.listing-title,
+.quarto-post .body .listing-title.h3 {
+  color: $darkpink;
+  font-family: 'Fira Sans', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+
+.quarto-post .body .description {
+  font-family: "Merriweather";
+  font-size: 0.9em;
+}
+
+.listing-category {
+  font-family: "Inter";
+}
+
+.quarto-post .body {
+  font-family: "Merriweather";
+}
+
+.quarto-category:hover {
+  background-color: $darkpink;
+  color: #ebebeb !important;
+  opacity: .6;
+}
+
+.listing-category:hover {
+  background-color: $darkpink;
+  color: #ebebeb !important;
+  opacity: .6;
+}
+
+a.nav-link:hover,
+a.navbar-brand:hover {
+  color: #3b676b !important;
+}
+
+.quarto-listing-category .category.active {
+  font-weight: 600;
+  color: $darkpink;
+}
+
+.quarto-title-banner {
+  margin-bottom: 1em;
+  color: #fff;
+  // background: #83b7bb;
+}

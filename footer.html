@@ -1,0 +1,31 @@
+<html>
+  
+<head>
+  <!-- ... -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
+
+</head>
+<body>
+  <!-- ... -->
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://waline-aster-hu.vercel.app',
+      lang: 'en',
+      reaction: [
+    'https://unpkg.com/@waline/emojis@1.1.0/tw/1f44d.png',
+    'https://unpkg.com/@waline/emojis@1.1.0/tw/2753.png',
+    'https://unpkg.com/@waline/emojis@1.1.0/tw/1f44f.png',
+  ],
+    });
+  </script>
+  
+  
+</body>
+</html>

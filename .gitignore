@@ -1,0 +1,18 @@
+.Rproj.user
+*.code-workspace
+_site/
+_freeze/
+*.Rproj
+.Rhistory
+.RData
+.ipynb_checkpoints
+art/
+
+### macOS ###
+# General
+*/.DS_Store
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+/.quarto/

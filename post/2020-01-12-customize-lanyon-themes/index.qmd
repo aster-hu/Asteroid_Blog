@@ -1,0 +1,50 @@
+---
+title: Customize Website Colour Themes in Jeykll
+date: 2020-01-12
+categories: [html, css, jekyll, 2020]
+---
+
+[![Lanyon theme](lanyon.png)](https://github.com/poole/lanyon)
+
+
+I'm a crazy theme person. After spending sometime searching around, I ended up choosing [Lanyon](https://github.com/poole/lanyon) as my theme.
+
+## Install Theme
+
+The theme is based on [Poole](https://github.com/poole) so I followed their [instruction](https://github.com/poole/poole#usage).
+
+If there's any error message when running the server, double check if all dependencies has been installed.
+
+```bash
+bundle install
+```
+
+## Customize Theme Color
+
+I'm using Cyan color schemes that ship with Lanyon, but I customized the default color into a deeper cyan color `#408F96`.
+
+To change it, go to `/public/css/lanyon.css` and search `cyan`.
+
+Replace the code below:
+
+```css
+.theme-base-0c .sidebar,
+.theme-base-0c .sidebar-toggle:active,
+.theme-base-0c #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #408F96;
+}
+.theme-base-0c .container a,
+.theme-base-0c .sidebar-toggle,
+.theme-base-0c .related-posts li a:hover {
+  color: #009688;
+}
+```
+
+I also made some small adjustment, such as changing font size and etc. The biggest change I made is to add a table of content bar on the side. The plugin is [jekyll-toc](https://github.com/toshimaru/jekyll-toc)
+
+As of now, I haven't figured it out how to make it hidden when sizing the webpage to small window. I guess I should add some code on the layout css and html file, but the testing did not achieve what I want.
+
+----
+06/08 updated:
+
+Just discovered that Github pages doesn't support jekyll-toc so I had to disable it from the site.

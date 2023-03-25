@@ -1,0 +1,54 @@
+---
+title: "Aster Hu"
+image: ./palette.JPG
+about:
+  template: trestles
+  image-width: 10em
+  links:
+    - icon: envelope
+      text: Email
+      href: "mailto: hello@asterhu.com"
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/asterhu
+    - icon: github
+      text: Github
+      href: https://github.com/aster-hu
+    - icon: rss
+      text: RSS
+      href: https://asterhu.com/index.xml
+
+---
+
+### Aloha!
+
+I'm a senior analyst working at TD Bank in Toronto, Canada. My job focuses on data oversight and lifecycle management; I write code for my work, but mostly just for fun.
+
+Not a hardcore developer per se as I don't come with the Computer Science background, but I think anyone with the desire to learn can benefit from technology because it's so awesome.
+
+From my perspective, blogging is a systematic way of contemplation and reflection, and I need this reason to push myself to incorporate the learning into my routine, otherwise I would lost track of it. Besides, static websites looks fantastic and, in my opinion, are a much more elegant solution than WordPress.
+
+### What I usually do:
+
+- Read wikipedia
+- Google random questions
+- Knitting
+- Crafting/watercolour sketching
+- Calligraphy
+- Dungeons & Dragons, video games
+
+### My toolbox:
+
+- R (`dplyr`)
+- VBA
+- Python
+- Excel
+- HTML/CSS
+
+Time management and productivity is a timeless topic.
+
+---
+
+##### Credit
+
+The website icon is made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com/).

@@ -1,0 +1,96 @@
+---
+title: "The truth about houseplants that are toxic to cats"
+categories: [life, plant, cat-care, 2022]
+date: 2022-10-25
+toc: true
+---
+
+![Photo by <a href="https://unsplash.com/@hanako87?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hana Oliver</a> on <a href="https://unsplash.com/photos/1v6XhsH-w9U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>](hana-oliver-1v6XhsH-w9U-unsplash.jpg)
+
+If you like plants, and you also have cats, you may have heard that many plants are poisonous to them.
+
+Well, to a certain extent, it is true. But *how* poisonous is it, exactly? Would it result in a deadly outcome, or just a brief moment of nausea?
+
+I tried to obtain a detailed understanding of it by doing a little study. Here is my summary:
+
+> **CAUTION: THESE ARE MY OWN OPINIONS AND CONCLUSION. YOUR CATS MIGHT IN DIFFERENT SITUATIONS AND PLEASE USE YOUR OWN JUDGEMENT TO MAKE THE BEST DECISION THAT SUITS YOU.**
+
+**For TL;DR**: [Jump to the plants toxicity list](#plants-toxicity-rating)
+
+## ⚠️⚠️⚠️ Lethally toxic: get rid of them ASAP
+
+Keep these plants in the house while cats are wandering around is no joke. The toxic components in the plant are so deadly toxic that even a small amount of ingestion could cause catastrophe. The sooner you get rid of them, the better.
+
+-   Sago Palm
+-   Lily (Hemerocallis sp., Lilium sp.)
+
+## ⚠️⚠️ Mildly toxic: place them with caution
+
+Generally speaking, plants in this category won't be fatal to our fluffy friends, but they nevertheless pose some short-term problems. Insoluble calcium oxalates, for example, are extremely common in popular houseplants including pothos, monstera, and ivy. The [ASPCA Animal Poison Control Center](https://www.isvma.org/wp-content/uploads/2016/10/ToxicPlants.pdf) states that clinical symptoms typically go away without any long-term consequences after 24 hours. Although they are not as serious as the first category, they still require treatment. Keep an eye on your cats if you have any of these plants; depending on the circumstances, you might need to call the vet if they consume them.
+
+-   Peace Lilly
+-   Devil's Ivy (Pothos, Golden Pothos)
+-   Philodendron
+-   Jade Plant (Rubber plants)
+-   Monstera deliciosa (Swiss cheese plant)
+-   English Ivy
+-   Marijuana (Cannabis sativus)
+-   Dracaena
+-   Dumb Cane (Dieffenbachia)
+-   Asparagus Fern
+
+## ⚠️ Minor toxic: not completely safe, but won't cause severe damage
+
+Plants in this category are overrated as toxic plants. Cats who eat them usually only develop minor gastrointestinal signs such as vomitting and diarrhea. Not trying to underestimate the damage, but symptoms like vomitting are quite common in cats due to various reasons, from internal parasites to stress. It does not mean cats are allowed to eat them all day, of course, but when they occasionally do so, at least you do not have to be panicked.
+
+Let's be honest, these plants are overrated as being poisonous. Cats who consume them typically only develop minor gastrointestinal signs such as vomiting and diarrhea. Not trying to underestimate the harm here, but symptoms like that are quite common in cats due to various reasons, from internal parasites to stress. Of course, this does not imply cats are freed to eat them all day, but when it happens occasionally, at least you do not need to panic.
+
+-   Eucalyptus
+-   Aloe vera
+-   Snake Plant (Mother-in-Law's Tongue)
+-   Fig (Weeping Fig)
+-   Poinsettia
+
+## Plants Toxicity Rating {#plants-toxicity-rating}
+
+Below is the full list of toxicity in some common non-pet-friendly plants, including my toxicity rating, the toxic component and clinical signs accordingly to ASPCA.
+
+::: {.overflow-table markdown="block"}
+| Plant name                              | Toxicity rating | Toxic agent                                    | Clinical signs                                                                                                                                                                  |
+|------------------|------------------|------------------|------------------|
+| Sago Palm                               | ⚠️⚠️⚠️          | Cycasin                                        | Vomiting, melena, icterus, increased thirst, hemorrhagic gastroenteritis, bruising, coagulopathy, liver failure, death                                                          |
+| Lily (Hemerocallis sp., Lilium sp.)     | ⚠️⚠️⚠️          | Unknown                                        | Vomiting, inappetence, lethargy, kidney failure, death                                                                                                                          |
+| Marijuana (Cannabis sativus)            | ⚠️⚠️            | Delta-9-THC (tetrahydrocannabinol)             | Prolonged depression, vomiting, incoordination, sleepiness or excitation, hypersalivaton, dilated pupils, low blood pressure, low body temperature, seizure, coma, death (rare) |
+| Dumb Cane (Dieffenbachia)               | ⚠️⚠️            | Insoluble calcium oxalates, proteolytic enzyme | Oral irritation, intense burning and irritation of mouth , tongue and lips, excessive drooling, vomiting, difficulty swallowing                                                 |
+| Eucalyptus                              | ⚠️              | Essential oils: eucalyptol                     | Salivation, vomiting, diarrhea, depression, weakness                                                                                                                            |
+| Asparagus Fern                          | ⚠️⚠️            | Steroidal saponins                             | Allergic dermatitis with repeated dermal exposure. Berry ingestion could result in gastric upset (vomiting, abdominal pain, or diarrhea).                                       |
+| Peace Lilly                             | ⚠️⚠️            | Insoluble calcium oxalates                     | Oral irritation, intense burning and irritation of mouth, tongue and lips, excessive drooling, vomiting, difficulty swallowing                                                  |
+| Jade Plant (Rubber plants)              | ⚠️⚠️            | Unknown                                        | Vomiting, depression, incoordination                                                                                                                                            |
+| Aloe vera                               | ⚠️              | Saponins, anthraquinones                       | Vomiting (not horses), lethargy, diarrhea. The gel is considered edible.                                                                                                        |
+| Devil's Ivy (Pothos, Golden Pothos)     | ⚠️⚠️            | Insoluble calcium oxalates                     | Oral irritation, pain and swelling of mouth, tongue and lips, excessive drooling, vomiting (not horses), difficulty swallowing                                                  |
+| Snake Plant (Mother-in-Law's Tongue)    | ⚠️              | Saponins                                       | Nausea, vomiting, diarrhea                                                                                                                                                      |
+| Philodendron                            | ⚠️⚠️            | Insoluble calcium oxalates                     | Oral irritation, pain and swelling of mouth, tongue and lips, excessive drooling, vomiting (not horses), difficulty swallowing                                                  |
+| Fig (Weeping Fig)                       | ⚠️              | Proteolytic enzyme (ficin), psoralen (ficusin) | Gastrointestinal and dermal irritation                                                                                                                                          |
+| Monstera deliciosa (Swiss cheese plant) | ⚠️⚠️            | Insoluble calcium oxalates                     | Oral irritation, intense burning and irritation of mouth, tongue and lips, excessive drooling, vomiting, difficulty swallowing                                                  |
+| Dracaena                                | ⚠️⚠️            | Saponins                                       | Vomiting (occasionally with blood), depression, anorexia, hypersalivation, dilated pupils (cats)                                                                                |
+| Ivy                                     | ⚠️⚠️            | Triterpenoid saponins (hederagenin)            | Vomiting, abdominal pain, hypersalivation, diarrhea. Foliage is more toxic than berries                                                                                         |
+| Poinsettia                              | ⚠️⚠️            | Irritant sap                                   | Irritating to the mouth and stomach, sometimes causing vomiting, but generally over-rated in toxicity                                                                           |
+:::
+
+## Pet friendly plants
+
+There are also many pet friendly plants available to choose. Some online merchandise would even advertise them. You can check out the full list on the ASPCA website:
+
+[ASPCA: Full List of Toxic and Non-Toxic Plant](https://www.aspca.org/pet-care/animal-poison-control/cats-plant-list)
+
+------------------------------------------------------------------------
+
+#### Reference:
+
+[The 5 Most Poisonous Plants for Cats](https://www.rover.com/blog/poisonous-plants-for-cats/)
+
+[31 Cat-Friendly Plants That Are Safe for Your Furry Friend](https://www.purewow.com/family/cat-friendly-plants)
+
+[Toxic Plants](https://www.isvma.org/wp-content/uploads/2016/10/ToxicPlants.pdf)
+
+[ASPCA: Full List of Toxic and Non-Toxic Plant](https://www.aspca.org/pet-care/animal-poison-control/cats-plant-list)

@@ -1,0 +1,68 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "*.md"
+
+website:
+  title: "Aster Hu's Blog | Asteroid"
+  description: "learning · programming · arts · random thoughts"
+  site-url: "https://asterhu.com"
+  google-analytics: "G-1E2YF2TSNE"
+  favicon: favicon.ico
+  page-footer:
+    left: "This blog is built with ❤️ and [Quarto](https://quarto.org/). License: [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)."
+    right:
+      - icon: rss
+        href: index.xml
+      - icon: github
+        href: https://github.com/aster-hu/
+      - icon: envelope
+        href: mailto:hello@asterhu.com
+  navbar:
+    title: "Asteroid"
+    background: "#83b7bb"
+    foreground: "#FFFFFF"
+    pinned: true
+    left: 
+      - text: "learning · programming · arts · random thoughts"
+        href: about/index.qmd
+    right:
+      - text: About 
+        href: about/index.qmd
+      - text: Post
+        href: post/
+      # - text: Gallery
+      #   href: art/
+      - text: Resources
+        href: links/index.qmd
+      - icon: rss
+        text: "Subscribe via RSS"
+        href: index.xml
+    backgroundcolor: "#faf8f8"
+
+format:
+  html:
+    smooth-scroll: true
+    theme: [litera, styles.scss]
+    css: h.css
+    link-external-icon: false
+    link-external-newwindow: true
+    citations-hover: true
+    footnotes-hover: true
+    toc: true
+    toc-depth: 3
+    toc-title: "Contents"
+    toc-location: left
+    code-link: false
+    anchor-sections: true
+    code-tools: false
+    code-fold: false
+    highlight-style: ayu
+    reference-location: document
+    fig-cap-location: margin
+
+execute:
+  warning: false
+  message: false
+  freeze: auto

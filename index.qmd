@@ -1,0 +1,23 @@
+---
+title: "Aster Hu's Blog"
+listing:
+  - id: post
+    contents: post/*/*.qmd
+    sort: "date desc"
+    type: default
+    fields: [image, date, title, author, description, categories, reading-time]
+    image-height: 9em
+    image-align: right
+    categories: cloud
+    page-size: 10
+    feed: true
+page-layout: full
+title-block-banner: false
+toc-location: left
+---
+
+::: {#post}
+:::
+
+
+

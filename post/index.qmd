@@ -1,0 +1,19 @@
+---
+title: ""
+listing:
+  - id: post
+    contents: "*/*.qmd"
+    type: default
+    image-height: 9.5em
+    image-align: right
+    fields: [image, date, title, description, categories, reading-time]  
+    sort: "date desc"
+    categories: true
+    sort-ui: false
+    filter-ui: true
+    page-size: 10
+page-layout: full
+---
+
+::: {#post}
+:::
