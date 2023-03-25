@@ -19,5 +19,24 @@ toc-location: left
 ::: {#post}
 :::
 
+```{r}
+#| echo: false
+library(stringr)
 
+posts <- list.dirs(
+  path = here::here("post"),
+  full.names = FALSE,
+  recursive = FALSE
+)
 
+# extract the slugs
+slugs <- gsub("^.*_", "", posts) %>% 
+  str_replace_all(., " ", "-") %>% 
+  substring(., 12)
+
+# lines to insert to a netlify _redirect file
+redirects <- paste0("/", slugs, " ", "/post/", posts)
+
+# write the _redirect file
+writeLines(redirects, here::here("_site", "_redirects"))
+```

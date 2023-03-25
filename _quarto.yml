@@ -62,4 +62,3 @@ format:
 execute:
   warning: false
   message: false
-  freeze: auto
