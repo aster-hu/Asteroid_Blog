@@ -7,7 +7,7 @@ description: "Avoid homebrew and embrance Anaconda! It will save you so much tim
 
 ![Photo by <a href="https://unsplash.com/@danielcgold?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Gold</a> on <a href="https://unsplash.com/photos/NneNzn0vs44?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>](dan-gold-NneNzn0vs44-unsplash.jpg)
   
-ARM-based Mac, or Apple Silicon, comes with the powerful M1/M2 chip. Since then, things have changed a lot therefore I'm writing this article to replace [the old blog post](../2020-02-04-setup-python-in-MacOS/index.qmd) for macOS Monterey 12.3 and later.
+ARM-based Mac, or Apple Silicon, comes with the powerful M1/M2 chip. Since then, things have changed a lot therefore I'm writing this article to replace [the old blog post](../2020-06-13-setup-python-in-MacOS/index.qmd) for macOS Monterey 12.3 and later.
 
 ## Homebrew: buyer beware
 

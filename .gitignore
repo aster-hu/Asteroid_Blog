@@ -17,3 +17,5 @@ _publish.yml
 .AppleDouble
 .LSOverride
 /.quarto/
+
+/.luarc.json

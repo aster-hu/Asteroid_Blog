@@ -1,6 +1,6 @@
 ---
 title: Customize Website Colour Themes in Jeykll
-date: 2020-01-12
+date: 2020-06-10
 categories: [html, css, jekyll, 2020]
 ---
 

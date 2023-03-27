@@ -1,7 +1,7 @@
 ---
 title: Create Résumé/CV Using LaTex
 categories: [tutorial, latex, career, business, 2020]
-date: 2020-04-19
+date: 2020-06-20
 ---
 
 ## Outcome

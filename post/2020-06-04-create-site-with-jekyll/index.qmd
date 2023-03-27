@@ -1,7 +1,7 @@
 ---
 title: Create a Site by Using Jekyll
-date: 2019-12-04
-categories: [website, jekyll, tutorial, 2019]
+date: 2020-06-04
+categories: [website, jekyll, tutorial, 2020]
 description: Creating a static blog is easier than you think.
 ---
 

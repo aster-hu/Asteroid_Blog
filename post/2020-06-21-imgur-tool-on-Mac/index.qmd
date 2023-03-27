@@ -1,7 +1,7 @@
 ---
 title: Automatically uploading MacOS screenshot to Imgur
 categories: [tutorial, toolkit, macos, toolkit, 2020]
-date: 2020-05-10
+date: 2020-06-21
 ---
 
 When I'm writing blog, I often need to attach picture URL from Imgur. It becomes extremely annoying to open Imgur each time to upload and copy URL, so I started looking for plugins/tools to make the process easier.

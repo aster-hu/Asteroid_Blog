@@ -1,7 +1,7 @@
 ---
 title: "Python Project No.2: Text-based Adventure Game"
 categories: [python, 2020]
-date: 2020-04-10
+date: 2020-06-22
 ---
 
 ![Zork I: The Great Underground Empire, 1980](Zork-The-Great-Underground-Empire.jpg)

@@ -1,7 +1,7 @@
 ---
 title: How to Sync Atom Packages Between Devices
 categories: [tutorial, atom, 2020]
-date: 2020-03-21
+date: 2020-06-27
 ---
 
 ![](atom.jpg)
