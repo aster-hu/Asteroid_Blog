@@ -1,0 +1,14 @@
+{
+  "hash": "a0ba6d9fe2cf37e5a896fdb7b8bbc333",
+  "result": {
+    "markdown": "---\ntitle: \"Aster Hu's Blog\"\nlisting:\n  - id: post\n    contents: post/*/*.qmd\n    sort: \"date desc\"\n    type: default\n    fields: [image, date, title, author, description, categories, reading-time]\n    image-height: 9em\n    image-align: right\n    categories: cloud\n    page-size: 10\n    feed: true\npage-layout: full\ntitle-block-banner: false\ntoc-location: left\n---\n\n\n::: {#post}\n:::\n\n\n::: {.cell}\n\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

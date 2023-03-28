@@ -1,7 +1,6 @@
 .Rproj.user
 *.code-workspace
 _site/
-_freeze/
 *.Rproj
 .Rhistory
 .RData
