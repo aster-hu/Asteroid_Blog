@@ -7,7 +7,6 @@ _freeze/
 .RData
 .ipynb_checkpoints
 art/
-_publish.yml
 
 ### macOS ###
 # General
