@@ -32,7 +32,8 @@ posts <- list.dirs(
 # extract the slugs
 slugs <- gsub("^.*_", "", posts) %>% 
   str_replace_all(., " ", "-") %>% 
-  substring(., 12)
+  substring(., 12) %>% 
+  tolower()
 
 # lines to insert to a netlify _redirect file
 redirects <- paste0("/", slugs, " ", "/post/", posts)
