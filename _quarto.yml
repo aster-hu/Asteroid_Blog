@@ -42,7 +42,6 @@ format:
   html:
     smooth-scroll: true
     theme: [litera, styles.scss]
-    css: h.css
     link-external-icon: false
     link-external-newwindow: true
     citations-hover: true
@@ -62,3 +61,4 @@ format:
 execute:
   warning: false
   message: false
+  freeze: auto
