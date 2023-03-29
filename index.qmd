@@ -14,28 +14,7 @@ listing:
 page-layout: full
 title-block-banner: false
 toc-location: left
-execute: 
-  freeze: false
 ---
 
 ::: {#post}
 :::
-
-```{python}
-import os
-import re
-
-# get list of directories in the "post" directory
-path = os.path.join(os.getcwd(), "post")
-posts = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
-posts
-# extract the slugs
-slugs = [re.sub("^.*_", "", p)[11:].lower() for p in posts]
-
-# generate redirect lines
-redirects = [f"/{slug} /post/{post}" for slug, post in zip(slugs, posts)]
-
-# write to _redirects file
-with open(os.path.join(os.getcwd(), "_site", "_redirects"), "w") as f:
-    f.write("\n".join(redirects))
-```
