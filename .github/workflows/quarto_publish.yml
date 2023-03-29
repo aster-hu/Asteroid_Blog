@@ -21,7 +21,7 @@ jobs:
           r-version: '4.2.3'
 
       - name: Install R packages
-      - uses: r-lib/actions/setup-r-dependencies@v2
+        uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: ｜
             any::stringr
