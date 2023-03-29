@@ -15,17 +15,14 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install R
-        uses: r-lib/actions/setup-r@v2
+      - name: Render Quarto Website
+        uses: quarto-dev/quarto-actions/render@v2
         with:
-          r-version: '4.2.3'
+          to: html # If set, it will be equivalent to `quarto render --to html`
+          path: source-folder # By default, the current working dir is used i.e `quarto render .`
 
-      - name: Install R packages
-        uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          packages: ｜
-            any::stringr
-            any::rmarkdown
+      - name: Add Netlify redirects
+        run: mv _redirects _site
 
       - name: Render and Publish 
         uses: quarto-dev/quarto-actions/publish@v2
