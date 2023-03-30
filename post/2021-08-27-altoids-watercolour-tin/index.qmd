@@ -9,7 +9,7 @@ reference-location: margin
 
 ## Things You Need
 
-![Materials](materials.jpg)
+![Materials](diy_materials.jpg)
 
 - [ ] Watercolour paints (obviously)
 - [ ] Altoids mint tin
@@ -44,7 +44,7 @@ I used blue tac to stick them together, but any glue will do. Put this piece to 
 
 #### 4. Plan the position of watercolour pans {#planbox}
 
-![Altoids tin](altoidstin.jpg)
+![Altoids tin](altoids_tin.jpg)
 
 No matter how many pans you want to put in, it's better to plan ahead.
 
@@ -56,7 +56,7 @@ Grab a tiny amount of blue tac to stick the pan into the planned position. Push 
 
 If you have some white enamel paint, you can spray it inside of the tin so that you have a good mixing area.
 
-![Sketch](sketch.jpg)
+![Sketch](the_sketch.jpg)
 
 **That's it.** It's really simple, and the size makes it super handy for outdoor sketching.
 
