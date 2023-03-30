@@ -6,10 +6,10 @@ listing:
     type: default
     image-height: 9.5em
     image-align: right
-    fields: [image, date, title, description, categories, reading-time]  
+    fields: [image, author, date, title, description, categories, reading-time]  
     sort: "date desc"
     categories: true
-    sort-ui: false
+    sort-ui: [date, categories]
     filter-ui: true
     page-size: 10
 page-layout: full
