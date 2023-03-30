@@ -10,7 +10,9 @@ listing:
     image-align: right
     categories: cloud
     page-size: 10
-    feed: true
+    feed:  
+      categories: 
+        - R
 page-layout: full
 title-block-banner: false
 toc-location: left
