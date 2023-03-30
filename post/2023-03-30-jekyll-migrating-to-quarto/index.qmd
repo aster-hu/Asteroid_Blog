@@ -1,0 +1,167 @@
+---
+title: "Migrating from Jekyll to Quarto"
+subtitle: "Goodbye Jekyll. Hello Quarto!"
+categories: [Jekyll, Quarto, website, 2023]
+description: "Here is why I migrated to Quarto and some details of the migration process. Hopefully it will help you."
+date: 2023-03-30
+# draft: true
+---
+
+When I started blogging in 2020, I used Jekyll as my static site generator because it's popular and has lots of resources on the internet. Back then, I had zero knowledge of HTML/CSS to begin with, and barely knew anything about Python and R. As I learned and wrote more, I did have some pain points with my blog and decided to migrate to Quarto. Here is my experience.
+
+## Why I left Jekyll
+
+-   **It's not the best workflow for technical writing**, as Jekyll uses plain markdown files. If I wanted to present the code output, I had to copy the output manually and paste into my post. An alternative is to use R Markdown, which requires combining [`blogdown`](https://pkgs.rstudio.com/blogdown/) + Hugo, but I'll [explain later](#what-about-blogdownhugo) why I didn't go down that route.
+
+-   **Most Jekyll blogs don't have a global search**, and only search results from titles and tags, which I don't think adds much value. I can probably add the global search by a third-party service, but it will be a complicated task.
+
+-   **Few issues with my theme**. In my Jekyll blog I used [klisé theme](https://klise.vercel.app). Although I like the minimalistic look, the layout design does not emphasize the title. As I add more posts, it becomes difficult to catch the topic in the first glimpse. Another issue is the tag system, it's not structured as the way I want it.
+
+## Hello, Quarto
+
+![](quarto_logo.png){width="350"}
+
+What is [Quarto](https://quarto.org)? To put it simple, it is a new format `.qmd` document that can be rendered to different output such as pdf, html, presentations, website, etc. It supports not only R, but also Python, Julia, and more.
+
+It makes Quarto a very powerful tool for technical writing due to its versatility. To me, this is the deal breaker. It's like an enhanced version of R Markdown but can also generate websites.
+
+## Migration process
+
+### Helpful resources
+
+The setup is super easy thanks to [the official documentation](https://quarto.org/docs/websites/website-blog.html). It's the best go-to resource and very well-writen, I followed it without issue for setup. [Beatriz Milz's post](https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/) is also very detailed and has lots of screenshots. For style customization, [Albert Rapp's ultimate guide](https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide) will be a helpful resource.
+
+### Theme and configuration
+
+I didn't spent much time on the theme, because Quarto's default looks very nice out-of-the-box. There aren't many to choose anyways though. My theme is based on [Frank Harrell's blog](https://www.fharrell.com), and I did few tweaks on the `styles.scss`.
+
+If you are looking for inspiration, check out [Quarto Gallery](https://quarto.org/docs/gallery/#websites) for some real examples.
+
+### Convert old naming convention
+
+My blog on Jekyll and Quarto have different folder structure to store my posts. For example, in my Jekyll blog, my post is stored in:
+
+```
+├── _posts
+│   ├── 2023-02-21 My blog post
+│   │   ├── 2023-02-21-My blog post.md
+```
+
+And the URL is the name of `md` file excluding the date, such as:  
+`https://mydomain.com/my-blog-post`
+
+However, in my Quarto blog, the desired structure is:
+
+```         
+├── post
+│   ├── 2023-02-21-my-blog-post
+│   │   ├── index.qmd
+```
+Quarto will pickup the name of the post folder as the URL, and it will be  
+`https://mydomain.com/post/2023-02-21-my-blog-post/`
+
+This means I need to rename all post files and folders. For the former, it can be easily done in R:
+
+``` r
+old.names <-
+  list.files(path = ".",
+             pattern = "md$",
+             recursive = TRUE)
+
+new.names <-
+  gsub(pattern = "^(.*)$",
+       replacement = "index.qmd",
+       x = old.names)
+       
+new.names <- file.path(dirname(old.names), new.names)
+```
+
+The script will rename all `.md` files to `index.qmd`. I don't have to change it to `.qmd`, but... why not.
+
+As of folders, I simply use MacOS's Finder to replace the whitespace in batch.
+
+### Redirect broken links using Netlify
+
+[Netlify has the ability to redirect URL](https://docs.netlify.com/routing/redirects/) by putting a `_redirects` file in the publish folder. I ~~stole~~ borrowed [Danielle Navarro's](https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/#fnref3) script to generate the file, with minor changes to accomondate my own naming convention.
+
+Now I have a `_redirects` file, and I put it under root folder for Github Actions to use later.
+
+### Add comments section
+
+My old blog used utterances for comments. I don't think it fits my most audience since it requires a Github login. For that reason, I switched to [Waline](https://waline.js.org/en/) following their getting started tutorial.
+
+## Build Quarto from Github Actions to Netlify
+
+Here is the workflow when I update my site:
+
+- I add my post, use `quarto preview` to review the site locally
+
+- Push the files to Github repo (without render)
+
+- Github Actions will render and publish the site to Netlify
+
+[Quarto's publishing guide](https://quarto.org/docs/publishing/netlify.html#github-action) is extremely helpful to prep and set up the Netlify + Github Actions workflow, but I need to consider the Netlify `_redirects` file.
+
+Instead of rendering `_redirects` every time like [Danielle Navarro does](https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/#fnref3), I did a trick by uploading the file to root folder, and using the Github Actions to move it to `_site` folder after it completes the render. Here is my workflow file:
+
+```yaml
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+
+name: Quarto Publish
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render Quarto Website
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html
+          
+      - name: Add Netlify redirects
+        run: mv _redirects _site  # Move the _redirects file to _site folder
+
+      - name: Publish without render
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: netlify
+          render: false # Set false to prevent overriding _site by re-render
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+```
+
+This method has the edge compared to other workflows:
+
+1. Does not require waiting for the local render, which could take a few minutes.
+
+2. Avoid uploading the bulky `_site` folder to the Github repo
+
+2. No need to render `_redirects` every time, thereby avoiding the need to deal with installing R/Python/dependencies in Github Actions, which is required if you follow Danielle Navarro's method.
+
+## Do you need to migrate to Quarto?
+
+I think Quarto will benefit you if you:
+
+- Write technical content, especially with different programming languages
+
+- Use R Markdown but also write in Python and want something native rather than the `reticulate` engine
+
+- Want a simple and functional website and don't care for fancy themes
+
+- Just like to write in a visual editor[^1]
+
+[^1]: Quarto's visual editor works very similar to [Notion](https://www.notion.so) and I think it has lots of potential among non-technical writers
+
+## What about blogdown/Hugo?
+
+Blogdown + Hugo has been popular among R communities. However, after reading a few posts, I chose not to go with it because of its compatibility issue. Fixing things when Hugo updates and Blogdown breaks seems like a lot of work, and many people have complained about it.
+
+Also, it's difficult to find a theme I like. I've grown tired of it and just want to stick with something simple so that I can focus more on content. Quarto is new, but it looks like a great option and is growing very quickly. I'm sure there will be more customization options/extensions available in the near future.
