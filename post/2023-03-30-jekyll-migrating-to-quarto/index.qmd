@@ -1,7 +1,7 @@
 ---
 title: "Migrating from Jekyll to Quarto"
 subtitle: "Goodbye Jekyll. Hello Quarto!"
-categories: [Jekyll, Quarto, website, github-action, 2023]
+categories: [jekyll, quarto, website, github-action, 2023]
 description: "Here is why I migrated to Quarto and some details of the migration process. Hopefully it will help you."
 date: 2023-03-30
 # draft: true
