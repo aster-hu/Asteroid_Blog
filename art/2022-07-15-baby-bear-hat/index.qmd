@@ -1,0 +1,7 @@
+---
+title: "Baby bear hat"
+categories: [knitting]
+date: 2022-07-15
+---
+
+![](baby-bear-hat.jpeg)

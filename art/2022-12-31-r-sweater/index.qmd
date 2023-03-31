@@ -1,0 +1,7 @@
+---
+title: "R's new year sweater"
+categories: [knitting]
+date: 2022-12-31
+---
+
+![](r-sweater.jpg)

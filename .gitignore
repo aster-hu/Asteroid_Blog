@@ -5,7 +5,6 @@ _site/
 .Rhistory
 .RData
 .ipynb_checkpoints
-art/
 
 ### macOS ###
 # General

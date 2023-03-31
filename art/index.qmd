@@ -1,0 +1,19 @@
+---
+title: "Gallery"
+listing:
+  - id: art
+    contents: "*/*.qmd"
+    type: grid
+    image-height: 20em
+    fields: [image, date, title, categories]
+    sort: "date desc"
+    categories: true
+    sort-ui: [date]
+    page-size: 12
+page-layout: full
+---
+
+> In the rhythm of the needles, there is music for the soul.
+
+::: {#art}
+:::

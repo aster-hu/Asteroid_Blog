@@ -1,0 +1,13 @@
+# Options specified here will apply to all posts in this folder
+
+# freeze computational output
+freeze: auto
+
+# Enable banner style title blocks
+title-block-banner: false
+
+page-layout: article
+
+format:
+  html:
+    include-after-body: ../footer.html
