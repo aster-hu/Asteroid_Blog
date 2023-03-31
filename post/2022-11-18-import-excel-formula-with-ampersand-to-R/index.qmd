@@ -70,4 +70,4 @@ However, `readxl` has its limitation. Comparing with `openxlsx`, `readxl::read_e
 
 ## Looking foward
 
-I still prefer `openxlsx` to other as I like its arguments and it fits the business world well. There's an antecedent package `openxlsx2` on the way - Let's wait and see if it resolves the issue.
+I still prefer `openxlsx` to other as I like its arguments and it fits the business world well. There's a successor package `openxlsx2` on the way - Let's wait and see if it resolves the issue.

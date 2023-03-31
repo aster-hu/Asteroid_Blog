@@ -8,7 +8,7 @@ title: "Useful Resources & Website"
 A must-read for R beginners. This book is the 2nd edition of [R for Data Science](https://r4ds.had.co.nz) and made some updates. It also features Quarto at the end of the book, which is the publishing system that builds this website.
 
 #### [R-bloggers](http://r-bloggers.com/)
-A curated feed of numerous bloggers who talk about R tips and projects. My blog is also on the contributor list :). You can subscribe to R-bloggers by email or [their RSS feed](http://feeds.feedburner.com/RBloggers). 
+A curated feed of numerous bloggers who talk about R tips and projects. You can subscribe to R-bloggers by email or [their RSS feed](http://feeds.feedburner.com/RBloggers). 
 
 #### [Tidyverse blog](https://www.tidyverse.org/blog/)
 This is where I got the latest news about tidyverse packages, since I use many of their packages.
