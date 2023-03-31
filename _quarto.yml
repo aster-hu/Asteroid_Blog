@@ -23,14 +23,13 @@ website:
     pinned: true
     left: 
       - text: "learning · programming · arts · random thoughts"
-        href: /
     right:
       - text: About 
         href: about/index.qmd
       - text: Post
         href: post/
-      # - text: Gallery
-      #   href: art/
+      - text: Gallery
+        href: art/
       - text: Resources
         href: links/index.qmd
       - icon: rss
