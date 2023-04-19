@@ -1,7 +1,5 @@
 # Aster Hu's Blog | Asteroid
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/084ba0a5-4120-4f4e-85fa-0b8123e49c3f/deploy-status)](https://app.netlify.com/sites/phenomenal-elf/deploys)
-
 [![Quarto Publish](https://github.com/aster-hu/Asteroid_Blog/actions/workflows/quarto_publish.yml/badge.svg)](https://github.com/aster-hu/Asteroid_Blog/actions/workflows/quarto_publish.yml)
 
 ![lastupdate](https://img.shields.io/github/last-commit/aster-hu/Asteroid_Blog?color=turquoise&label=updated)
