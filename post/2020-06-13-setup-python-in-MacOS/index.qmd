@@ -9,7 +9,7 @@ categories: [python, macos, envirnoment, 2020]
 ::: {.callout-note}
 
 ## 2023 UPDATE
-I wrote an [update version of this article](../2023-02-21-setup-python-environment-for-ARM-based-Mac/index.qmd), about setting up python on the new ARM-based Mac for macOS Monterey 12.3 and later.
+I wrote an [update version of this article](../2023-02-21-set-up-python-environment-for-ARM-based-Mac/index.qmd), about setting up python on the new ARM-based Mac for macOS Monterey 12.3 and later.
 
 :::
 
