@@ -10,7 +10,7 @@ $darkpink:         #d68181 !default;
 
 $font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "Inter" !default;
 $font-family-serif:       "Merriweather" !default;
-$font-size-base:              0.9rem !default;
+$font-size-base:              0.95rem !default;
 
 // Nav bar
 
@@ -90,7 +90,7 @@ a.sidebar-item-text.sidebar-link {
 
 .quarto-post .body .description {
   font-family: "Merriweather";
-  font-size: 0.9em;
+  font-size: 100%;
 }
 
 .listing-category {
@@ -118,9 +118,14 @@ a.navbar-brand:hover {
   color: #3b676b !important;
 }
 
+.quarto-listing-category .category {
+  font-size: 100%;
+}
+
 .quarto-listing-category .category.active {
   font-weight: 600;
   color: $darkpink;
+  font-size: 120%;
 }
 
 .quarto-title-banner {
