@@ -2,16 +2,15 @@
 title: "Replace missing value from other columns using coalesce join in dplyr"
 categories: [R, handling-na, dplyr, coalesce, function-programming, 2023]
 description: A simple solution to handle NA value.
-date: 2023-03-30
+date: 2023-05-11
 format: 
   html:
     df-print: tibble
-draft: true
 ---
 
 ![](dplyr.png)
 
-## Coalesce function in dplyr
+## The original coalesce function
 
 When cleaning and aggregating data using dplyr package in R, [`coalesce()`](https://dplyr.tidyverse.org/reference/coalesce.html) is extremely handy to replace the NA value with values from other columns.
 
@@ -54,9 +53,9 @@ full_join(df1, df2, by = "id") %>%
 
 ```
 
-### What's the pain point of `coalesce()`?
+## What's the pain point of `coalesce()`?
 
-Looks great so far, right? But remember, this is the most simple case. In the real world, it's common to have more than one variable that need to be coalesced. Applying the same method multiple times can quickly become a chore.
+Looks great so far, right? But remember, this is the most simple case. In the real world, it's common to have more than one variable that need to be coalesced. Applying the same method multiple times can quickly become chores.
 
 ```{r}
 # A more complicated example
@@ -121,9 +120,9 @@ full_join(df1, df2, by = "id") %>%
 
 As the above result shows, `coalesce()` takes the left value `X1` in `df1`, but what if I want `X2` from `df2` to be shown in the result? In reality, the default option might not meet the expectation.
 
-### A simple solution by using the coalesce join function
+## Build our own coalesce join function
 
-To simplify the workflow of `coalesce()`, I wrote a `coalesce_join()` function with my partner Rick to resolve all the pain points we mentioned. Here is the code and it can also be found on [gist](https://gist.github.com/xiesixia/d10befd1ce6f0186a2f7cdc6537f34c1).
+To simplify the workflow of `coalesce()`, I wrote a `coalesce_join()` function with my partner Rick to resolve all the pain points we mentioned. The code is shown below and it is also available on [gist](https://gist.github.com/xiesixia/d10befd1ce6f0186a2f7cdc6537f34c1).
 
 ```{r}
 require(dplyr)
@@ -156,6 +155,35 @@ coalesce_join <- function(x,
       .keep = "unused") # Remove the temporary columns ended with suffix
   }
 ```
+
+### Usage and arguments
+
+
+```r
+coalesce_join(x, 
+              y, 
+              by = NULL, 
+              keep = c("left", "right"),
+              suffix = c(".x", ".y"),
+              join = c("full_join","left_join", "right_join", "inner_join")
+              )
+```
+
+`keep`:  The default value is `left`.
+
+- If `left`, it keeps value from the left table when values exist in both tables  
+- If `right`, it keeps value from the right table when values exist in both tables
+
+`join`: Choose a join type from the following: 
+
+- `full_join`
+- `left_join`
+- `right_join`
+- `inner_join`
+
+The default is `full_join`.
+
+### Example
 
 Let's try applying it to the same data:
 
