@@ -1,6 +1,9 @@
 ---
 title: "Aster Hu"
 image: ./palette.JPG
+format:
+  html:
+    toc: false
 about:
   template: trestles
   image-width: 10em
@@ -28,22 +31,32 @@ Not a hardcore developer per se as I don't come with the Computer Science backgr
 
 From my perspective, blogging is a systematic way of contemplation and reflection, and I need this reason to push myself to incorporate the learning into my routine, otherwise I would lost track of it. Besides, static websites looks fantastic and, in my opinion, are a much more elegant solution than WordPress.
 
-### What I usually do:
+### Interests
+
+- Efficient data cleaning and manipulation
+- Exploratory and descriptive analysis
+- Intuitive dashboard design
+- Metric/KRI development methodology
+- Process workflow improvement
+- Tooling efficiency
+
+### My toolbox
+
+- R (`dplyr`)
+- Tableau
+- VBA/Excel/Power Query
+- Python
+- HTML/CSS
+
+### Hobbies
 
 - Read wikipedia
 - Google random questions
 - Knitting
-- Crafting/watercolour sketching
-- Calligraphy
+- Bullet journal/crafting
+- ~~Watercolour sketching~~
+- ~~Calligraphy~~
 - Dungeons & Dragons, video games
-
-### My toolbox:
-
-- R (`dplyr`)
-- VBA
-- Python
-- Excel
-- HTML/CSS
 
 Time management and productivity is a timeless topic.
 
