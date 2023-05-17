@@ -4,7 +4,7 @@ listing:
   - id: post
     contents: "*/*.qmd"
     type: default
-    image-height: 9.5em
+    image-height: 10em
     image-align: right
     fields: [image, author, date, title, description, categories, reading-time]  
     sort: "date desc"

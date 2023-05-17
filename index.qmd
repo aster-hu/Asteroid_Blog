@@ -6,7 +6,7 @@ listing:
     sort: "date desc"
     type: default
     fields: [image, date, title, author, description, categories, reading-time]
-    image-height: 9em
+    image-height: 10em
     image-align: right
     categories: cloud
     page-size: 10
