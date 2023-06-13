@@ -2,7 +2,9 @@
 title: "Useful Resources & Website"
 ---
 
-## R Resources
+Here are the resources that I find helpful for me. In general, I would only list resources and materials that I have tried, and will not post something I haven't read/watched.
+
+## Resources for R
 
 #### [R for Data Science (2e)](https://r4ds.hadley.nz)
 A must-read for R beginners. This book is the 2nd edition of [R for Data Science](https://r4ds.had.co.nz) and made some updates. It also features Quarto at the end of the book, which is the publishing system that builds this website.
@@ -17,4 +19,15 @@ This is where I got the latest news about tidyverse packages, since I use many o
 Yihui is a software engineer who works at Posit(previously RStudio) and is a main contributor to many popular R packages such as blogdown, bookdown and knitr. He shares interesting tips & exercise about R, and sometimes industry ~~rumours~~ news.
 
 #### [RWeekly](https://rweekly.org)
-A weekly issue that covers latest news about R community.
+A weekly issue that covers latest news about R community. I usually just quickly skim through them because many of the news articles overlap with [R-bloggers](http://r-bloggers.com/).
+
+## Resources for Tableau
+
+#### [Andy Kriebel's YT channel](https://www.youtube.com/@vizwiz)
+Very detailed step-by-step video tutorials. What I really like is that Andy usually shows you different ways to achieve the same result and also explain the difference, if any. It's super helpful to understand Tableau's logic and workflow, which also helps me choose the best method in the future. 
+
+## Resources for Python
+
+#### [ChatGPT](http://chat.openai.com)
+
+No I wasn't joking. ChatGPT may have some reliablity issues for other coding languages, but for Python, it's AWESOME. Just remember to simplify the scenario when you ask it to write the code, just like you would do in Stack Overflow.
