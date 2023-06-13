@@ -21,7 +21,7 @@ Before OS Monterey, macOS comes with the outdated python 2.7 pre-installed, whic
 
 The good news is that, since macOS Monterey 12.3 Apple have removed python 2.7 (finally!) and have the python 3 by default.
 
-We can start by checking the existing python version.
+We can start by checking the existing python version. Open the Terminal app and enter code as below.
 
 ```zsh
 % which python
@@ -53,9 +53,10 @@ Once Anaconda is installed, it should automatically set the path for us. We can 
 We can see that the path is now in the Anaconda folder, which means the default python has been directed to the version within Anaconda.
 
 > *What is the PATH?*
+>
+> PATH
+> : PATH contains the directories of program folder. By setting the path, we are telling the computer to use the right version so that it can execute the code using the version we have specified.
 
-**Good to Know:**  
-**PATH** contains the directories of program folder. By setting the path, we are telling the computer to use the right version so that it can execute the code using the version we have specified.
 
 ## Step 3: Update or install additional packasges
 
@@ -70,7 +71,7 @@ conda update --all
 Or install additional packages:
 
 ```zsh
-conda install name_of_package
+conda install package1 package2 package3
 ```
 
 Now it's done. If you use Jupyter Notebook, you can initiate it by typing `Jupyter notebook` in terminal and start coding python!
@@ -83,7 +84,7 @@ The first step is to install the `Jupyter` extension in VS Code so that we can u
 
 Once we have the Jupyter extension installed, go to `Settings` and search `python interpreter`, paste the python path from Step 2 to **`Python: Default Interpreter Path`**.
 
-![vsc_setting](vsc_setting.png)
+![Python Interpreter Path in VS Code Setting](vsc_setting.png)
 
 From now on, whenever we run python in VS Code, it will also use the python version in Anaconda to execute the scripts.
 
