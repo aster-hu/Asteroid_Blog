@@ -62,7 +62,7 @@ Quarto will pickup the name of the post folder as the URL, and it will be
 
 This means I need to rename all post files and folders. For the former, it can be easily done in R:
 
-``` r
+```r
 old.names <-
   list.files(path = ".",
              pattern = "md$",
@@ -104,7 +104,7 @@ Here is the workflow when I update my site:
 
 The good news is, I don't need to update the `_redirects` every time, the data is the same since it just converts old post links to the new ones. So I did a trick by uploading the `_redirects` file to root folder, and using the Github Actions to move it to `_site` folder **after** it completes the render. Here is my workflow file:
 
-```yaml
+```{.yaml filename=".github/workflows/quarto_publish.yml"}
 on:
   workflow_dispatch:
   push:
