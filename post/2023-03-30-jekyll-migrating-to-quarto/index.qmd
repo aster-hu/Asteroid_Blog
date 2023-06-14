@@ -102,7 +102,7 @@ Here is the workflow when I update my site:
 
 [Quarto's publishing guide](https://quarto.org/docs/publishing/netlify.html#github-action) is extremely helpful to prep and set up the Netlify + Github Actions workflow, but I need to consider the Netlify `_redirects` file. The reason is, if I follow the workflow file in the guide, it will also render the `_redirects` file every time and I will need to deal with installing R/Python/dependencies in the workflow file as well. 
 
-The good news is, I don't need to update the `_redirects` every time, the data is the same since it just converts old post links to the new ones. So I did a trick by uploading the `_redirects` file to root folder, and using the Github Actions to move it to `_site` folder **after** it completes the render. Here is my workflow file:
+The good news is, I don't need to update `_redirects` every time. The data is the same, since it converts only the old post links. So I did a trick by uploading the `_redirects` file to root folder, and using the Github Actions to move it to `_site` folder **after** it completes the render. Here is my workflow file:
 
 ```{.yaml filename=".github/workflows/quarto_publish.yml"}
 on:
