@@ -48,7 +48,7 @@ website:
 format:
   html:
     smooth-scroll: true
-    theme: [cosmos, styles.scss]
+    theme: [litera, styles.scss]
     link-external-icon: true
     link-external-newwindow: true
     citations-hover: true
