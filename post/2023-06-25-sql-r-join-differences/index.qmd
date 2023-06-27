@@ -1,0 +1,140 @@
+---
+title: "The differences of left join in SQL and R"
+categories: [R, dplyr, SQL, handling-na, data, 2023]
+description: How the two languages handle NA in joins differently
+date: 2023-06-26
+---
+
+Recently, I encountered a situation where I needed to translate an Access SQL query to R, and I noticed the contrasting behaviors of these two languages when it comes to handling NA/NULL values in left joins.
+
+## The impact of NA/NULL values on joins
+
+When performing a join operation between two tables, it is essential to consider the presence of NA/NULL values. Let's take a left join as an example, where all records from the left table are retained and are attempted to be matched with corresponding rows in the right table. However, the presence of NA/NULL values raises questions about whether they should be matched with any corresponding values in the right table. As a result, this can lead to unexpected results due to the uncertainty inherent in the logic of the chosen tool.
+
+## SQL's approach to handle NULL in joins
+
+Let's look at a simple example by creating two tables named `fname` and `lname`.
+
+<details>
+
+<summary>Click to expand the code</summary>
+
+``` sql
+CREATE TABLE
+  fname (id int, firstname varchar(50));
+
+INSERT INTO fname
+VALUES
+  (1, 'Ada'),
+  (2, 'Bob'),
+  (NULL, 'Unknown');
+
+CREATE TABLE
+  lname (id int, lastname varchar(50));
+
+INSERT INTO lname
+VALUES
+  (1, 'Smith'),
+  (NULL, 'To be decided');
+```
+
+</details>
+
+```         
+# fname
+    id  firstname
+1    1        Ada
+2    2        Bob
+3 NULL    Unknown
+
+# lname
+    id      lastname
+1    1         Smith
+2 NULL To be decided
+```
+
+In the `fname` table, the 3rd observation contains a `NULL` value in `id`, while still having a placeholder value of "Unknown" in the `firstname` column. The same situation also occurs in the `lname` table, where the 2nd observation has a NULL value in `id` and it's being labeled as "To be decided" in the `lastname` column.
+
+It may seem unusual, but this type of data is not uncommom in business settings, where it often occurs due to low-quality data or when businesses require a placeholder for empty observations that can be analyzed later.
+
+If we apply a `LEFT JOIN` in SQL, the code would be:
+
+``` sql
+SELECT *
+FROM fname
+  LEFT JOIN lname ON fname.id = lname.id;
+```
+
+And this is the outcome we will get.
+
+``` r
+    id firstname   id lastname
+1    1       Ada    1    Smith
+2    2       Bob NULL     NULL
+3 NULL   Unknown NULL     NULL
+```
+
+As we can see, the placeholder value "To be decided" in the `lname` table has disappeared. This occurs because in SQL, NULL values in tables or views being joined never match each other[^1], resulting in SQL not returning a matched result.
+
+[^1]: *SyBooks Online*. (2011). Infocenter.sybase.com. [https://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X78356.htm](https://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc32300.1570/html/sqlug/X78356.htm)
+
+The question is, is this the expected outcome? Based on above result, it's impossible to tell whether a match couldn't be found, or if it represent a NULL value. Besides, what if we want to match these two NULL values and have "To be decided" correspond with "Unknown"? These questions remain until we have a clear mind of how we wish to handle NULL values.
+
+## How R handles NA in joins
+
+More precisely, we are referring to `dplyr::left_join`. Let's create the same tables in R and perform a left join.
+
+```{r}
+library(dplyr)
+
+fname <- tibble(
+  id = c(1:2, NA_character_),
+  firstname = c("Ada", "Bob", "Unknown")
+)
+
+lname <- tibble(
+  id = c(1, NA_character_),
+  lastname = c("Smith", "To be decided")
+)
+
+left_join(fname, lname, by = "id")
+```
+
+::: callout-note
+If you see a warning message saying "Each row in `x` is expected to match at most 1 row in `y`", this is a result of the multiple matches warning in dplyr 1.1.0. Tidyverse has modified the behaviour of multiple matches warning since dplyr 1.1.1, significantly reducing the number of warnings. For more information, please refer to the [release note of dplyr 1.1.1](https://www.tidyverse.org/blog/2023/03/dplyr-1-1-1/)
+:::
+
+From the above table, it actually returned a matched result "To be decided" for the NA value! This is because in R, by default two NA or NaN values are considered as equal, like `%in%`, `match()`, and `merge()`.[^2]
+
+[^2]: *Mutating joins --- mutate-joins*. (n.d.). Dplyr.tidyverse.org. [https://dplyr.tidyverse.org/reference/mutate-joins.html](https://dplyr.tidyverse.org/reference/mutate-joins.html)
+
+The good news is that we can modify this behaviour in R by utilizing the `na_matches` argument. When we set `na_matches = "never"`, it will behave the same way as in SQL.
+
+```{r}
+left_join(fname, lname, by = "id", na_matches = "never")
+```
+
+### What if there are multiple NAs?
+
+Generally speaking, having multiple NAs in key variable in joins is not considered a best practice and it is usually preferable to omit them. However, we may come across such situations from time to time.
+
+Assuming we have another NA in the `lname` table:
+
+```{r}
+lname <- data.frame(id = c(1, NA_character_, NA_character_),
+                     lastname = c("Smith", "To be decided", "Pending"))
+lname
+
+```
+
+What would happen if we join the two tables again?
+
+```{r}
+left_join(fname, lname, by = "id")
+```
+
+Since R treats two NAs as equal, similar to handling duplicates in key variables, it will return all the information from the right table due to multiple matches.
+
+## Conclusion and takeaway
+
+In SQL, NULL values in tables being joined are not considered as equal. When both table have NA/NULL value in the key variable, SQL treats them as unmatched, which differs from the default behaviour of `dplyr::left_join`, where NA is treated as a a match. When working with both SQL and R for data analysis, it is crucial to be mindful of the divergent handling of NULL values and adjust the join behaviour accordingly in order to deliver consistent outcomes.
