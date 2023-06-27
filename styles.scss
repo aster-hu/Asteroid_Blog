@@ -55,13 +55,8 @@ p.subtitle.lead {
 }
 
 .navbar-title {
-  color: #FFFFFF;
   font-size: 120%;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-.navbar-left-text {
-  color: #FFFFFF;
+  font-family: 'Trebuchet MS';
 }
 
 a.sidebar-item-text.sidebar-link {
@@ -80,12 +75,7 @@ a.sidebar-item-text.sidebar-link {
 .quarto-post .body h3.listing-title,
 .quarto-post .body .listing-title.h3 {
   color: $darkpink;
-  font-family: 'Fira Sans', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1.4em;
-  font-weight: 600;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-bottom: none;
+  font-family: $font-family-sans-serif;
 }
 
 .quarto-post .body .description {
