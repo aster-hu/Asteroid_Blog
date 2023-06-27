@@ -15,11 +15,11 @@ $font-size-base:              0.95rem !default;
 // Nav bar
 
 .li.a.dropdown-item {
-  color: "#2B2423";
+  color: #2B2423;
 }
 
 .dropdown-text {
-  color: "#FFFFFF";
+  color: #FFFFFF;
 }
 
 // Typography
@@ -33,7 +33,7 @@ $link-decoration: none;
 $link-hover-decoration: none;
 
 $code-block-bg: #faf9f9;
-$code-block-border-left: #31BAE9;
+$code-block-border-left: #83b7bb;
 
 
 h1.title {
@@ -120,6 +120,10 @@ a.navbar-brand:hover {
 
 .quarto-listing-category .category {
   font-size: 100%;
+}
+
+.quarto-listing-category .category:hover {
+  color: $darkpink;
 }
 
 .quarto-listing-category .category.active {

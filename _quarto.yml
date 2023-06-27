@@ -21,6 +21,7 @@ website:
     background: "#83b7bb"
     foreground: "#FFFFFF"
     pinned: true
+    logo: favicon.ico
     left: 
       - text: "learning · programming · arts · random thoughts"
     right:
@@ -33,15 +34,22 @@ website:
       - text: Resources
         href: links/index.qmd
       - icon: rss
-        text: "Subscribe via RSS"
+        text: "RSS Subscribe"
         href: index.xml
     backgroundcolor: "#faf8f8"
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            url:  https://github.com/aster-hu/Asteroid_Blog
+          - text: Report a Bug
+            url:  https://github.com/aster-hu/Asteroid_Blog/issues
 
 format:
   html:
     smooth-scroll: true
-    theme: [litera, styles.scss]
-    link-external-icon: false
+    theme: [cosmos, styles.scss]
+    link-external-icon: true
     link-external-newwindow: true
     citations-hover: true
     footnotes-hover: true
