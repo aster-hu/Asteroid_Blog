@@ -69,7 +69,8 @@ a.sidebar-item-text.sidebar-link {
 }
 
 .quarto-listing-category-title {
-    font-family: "Merriweather";
+  font-family: "Merriweather";
+  margin-top: 50px;
 }
 
 .quarto-post .body h3.listing-title,
@@ -108,8 +109,9 @@ a.navbar-brand:hover {
   color: #3b676b !important;
 }
 
-.quarto-listing-category .category {
-  font-size: 100%;
+.quarto-listing-category.category-cloud .category {
+  font-size: 120%;
+  margin: 0.5px;
 }
 
 .quarto-listing-category .category:hover {
@@ -119,7 +121,7 @@ a.navbar-brand:hover {
 .quarto-listing-category .category.active {
   font-weight: 600;
   color: $darkpink;
-  font-size: 120%;
+  font-size: 160%;
 }
 
 .quarto-title-banner {
@@ -127,3 +129,4 @@ a.navbar-brand:hover {
   color: #fff;
   // background: #83b7bb;
 }
+
