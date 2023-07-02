@@ -1,6 +1,6 @@
 ---
 title: How to Link and Manage Github Project in Atom
-categories: [tutorial, github, atom, workflow, 2020]
+categories: [tutorial, github, atom, 2020]
 date: 2020-06-20
 ---
 

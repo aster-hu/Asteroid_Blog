@@ -1,6 +1,6 @@
 ---
 title: Automatically uploading MacOS screenshot to Imgur
-categories: [tutorial, toolkit, macos, toolkit, 2020]
+categories: [tutorial, toolkit, macos, 2020]
 date: 2020-06-21
 ---
 

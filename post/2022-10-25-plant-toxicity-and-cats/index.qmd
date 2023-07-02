@@ -1,6 +1,6 @@
 ---
 title: "The truth about houseplants that are toxic to cats"
-categories: [life, plant, cat-care, 2022]
+categories: [life, 2022]
 date: 2022-10-25
 toc: true
 ---

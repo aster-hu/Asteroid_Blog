@@ -1,7 +1,7 @@
 ---
 title: "Set up a clean python environment for ARM-based Mac in 2023"
 date: 2023-02-21
-categories: [2023, tutorial, python, macos, environment]
+categories: [2023, tutorial, python, macos]
 description: "Avoid homebrew and embrance Anaconda! It will save you so much time trying to figure out which version has been used."
 ---
 

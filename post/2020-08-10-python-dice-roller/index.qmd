@@ -1,7 +1,7 @@
 ---
 title: "Python Project No.1: Dice Roller"
 date: 2020-08-10
-categories: [python, randomlization, 2020]
+categories: [python, 2020]
 ---
 
 ![Photo by <a href="https://unsplash.com/@cafera13?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carlos Felipe Ramírez Mesa</a> on <a href="https://unsplash.com/photos/-kwHrztmKzg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>](carlos-felipe-ramirez-mesa--kwHrztmKzg-unsplash.jpg)

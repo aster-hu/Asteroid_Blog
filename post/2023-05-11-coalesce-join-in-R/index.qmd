@@ -1,6 +1,6 @@
 ---
 title: "Replace missing value from other columns using coalesce join in dplyr"
-categories: [R, handling-na, dplyr, coalesce, function-programming, 2023]
+categories: [R, handling-na, dplyr, data, 2023]
 description: A simple solution to handle NA value.
 date: 2023-05-11
 format: 

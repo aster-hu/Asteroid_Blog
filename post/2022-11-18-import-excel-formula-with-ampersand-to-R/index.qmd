@@ -1,6 +1,6 @@
 ---
 title: "Alternatives of openxlsx when importing Excel to R"
-categories: [data, import-data, openxlsx, readxl, R, excel, 2022]
+categories: [data, openxlsx, readxl, R, excel, 2022]
 date: 2022-11-18
 toc: true
 ---

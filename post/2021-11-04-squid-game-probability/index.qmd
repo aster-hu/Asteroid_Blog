@@ -1,6 +1,6 @@
 ---
 title: "Squid Game: The probability of Glass Bridge"
-categories: [python, probability, monte-carlo, simulation, 2021]
+categories: [python, probability, 2021]
 date: 2021-11-04
 toc: True
 author:

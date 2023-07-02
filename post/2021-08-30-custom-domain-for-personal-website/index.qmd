@@ -1,6 +1,6 @@
 ---
 title: "I Finally Bought My Own Domain"
-categories: [domain, website, 2021]
+categories: [website, 2021]
 date: 2021-08-30
 toc: true
 ---

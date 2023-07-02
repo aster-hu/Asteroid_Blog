@@ -1,6 +1,6 @@
 ---
 title: "Course Review: Data Science with R"
-categories: [data-science, R, review, 2022]
+categories: [data, R, 2022]
 date: 2022-04-18
 toc: true
 ---
