@@ -21,7 +21,7 @@ jobs:
           to: html
           
       - name: Add Netlify redirects
-        run: mv _redirects _site  # Move the _redirects file to _site folder
+        run: mv _redirects _headers _site  # Move the _redirects file to _site folder
 
       - name: Publish without render
         uses: quarto-dev/quarto-actions/publish@v2
