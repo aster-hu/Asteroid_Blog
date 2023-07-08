@@ -5,7 +5,7 @@ website:
   title: "Aster Hu's Blog | Asteroid"
   description: "learning · programming · arts · random thoughts"
   site-url: "https://asterhu.com"
-  # google-analytics: "G-1E2YF2TSNE"
+  google-analytics: "G-1E2YF2TSNE"
   favicon: favicon.ico
   page-footer:
     left: "This blog is built with ❤️ and [Quarto](https://quarto.org/). License: [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)."
