@@ -20,7 +20,7 @@ jobs:
         with:
           to: html
           
-      - name: Add Netlify redirects
+      - name: Add Netlify redirects and configuration
         run: mv _redirects netlify.toml _site  # Move the _redirects and netlify configuration file to _site folder
 
       - name: Publish without render
