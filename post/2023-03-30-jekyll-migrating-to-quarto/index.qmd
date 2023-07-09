@@ -4,7 +4,7 @@ subtitle: "Goodbye Jekyll. Hello Quarto!"
 categories: [jekyll, quarto, website, github-action, netlify, 2023]
 description: "Here is why I migrated to Quarto and some details of the migration process. Hopefully it will help you."
 date: 2023-03-30
-# draft: true
+image: quarto_ga_netlify.png
 ---
 
 When I started blogging in 2020, I used Jekyll as my static site generator because it's popular and has lots of resources on the internet. Back then, I had zero knowledge of HTML/CSS to begin with, and barely knew anything about Python and R. As I learned and wrote more, I did have some pain points with my blog and decided to migrate to Quarto. Here is my experience.
@@ -19,7 +19,7 @@ When I started blogging in 2020, I used Jekyll as my static site generator becau
 
 ## Hello, Quarto
 
-![](quarto_logo.png){width="350"}
+![](quarto.png)
 
 What is [Quarto](https://quarto.org)? To put it simple, it is a new format `.qmd` document that can be rendered to different output such as pdf, html, presentations, website, etc. It supports not only R, but also Python, Julia, and more.
 
