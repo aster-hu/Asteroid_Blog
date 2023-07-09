@@ -4,7 +4,7 @@ project:
 website:
   title: "Aster Hu's Blog | Asteroid"
   description: "learning · programming · arts · random thoughts"
-  site-url: "https://asterhu.com"
+  site-url: "https://www.asterhu.com"
   google-analytics: "G-1E2YF2TSNE"
   favicon: favicon.ico
   page-footer:
