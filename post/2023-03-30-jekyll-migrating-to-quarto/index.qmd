@@ -92,6 +92,8 @@ My old blog used utterances for comments. I don't think it fits my most audience
 
 ## Build Quarto from Github Actions to Netlify
 
+![](quarto_ga_netlify.png)
+
 Here is the workflow when I update my site:
 
 - I add my post, use `quarto preview` to review the site locally
