@@ -1,0 +1,233 @@
+---
+title: "Create interactive 2023 Toronto mayoral election map in R with leaflet"
+categories: [R, data, viz, dplyr, 2023]
+description: "It's fun to create data viz, and even more fun to create an interactive one."
+date: 2023-07-11
+format: html
+image: toronto_mayoral_election_map.png
+---
+
+With the help of the internet and ChatGPT, I was able to create this interactive election map showing the top five candidates with the most votes in each ward. It took longer than expected, but it was fun to learn new things, such as working with JSON in R and exploring libraries like `sf` and `leaflet`. I will include the resources that helped me in [the reference section](#reference).
+
+The data source is from [the City of Toronto Open Data](https://open.toronto.ca). Initially, I planned to analyze opinion polls, but the aggregated data from polling firms lacked the level of detail I needed. So instead I used the unofficial by-election results from Open Data Toronto, which provided more information and allowed me to create an election map similar to those shown on local news. Although the Toronto municipal election is a direct election, it's still interesting to see voter preferences in different areas.
+
+:::{.callout-note}
+## Disclaimer
+
+This is my first time creating a map, and these notes are based on my understanding. There may be better or more efficient ways to accomplish this. If you notice any errors or have other ideas, please feel free to leave a comment :)
+:::
+
+In this exercise, I used the following packages.
+
+```{r}
+#| warning: false
+library(opendatatoronto)
+library(dplyr)
+library(tidyr)
+library(sf)
+library(leaflet)
+library(htmltools)
+```
+
+## Importing data from Open Data Toronto
+
+The unofficial by-election data was published by Open Data Toronto and can be found [here](https://open.toronto.ca/dataset/by-election-results-unofficial/). JSON files were available for direct download, and there was even an R library `library(opendatatoronto)` for downloading the data, which I used.
+
+The data package contained two JSON files, but I only needed the second one. To import the data, I used `tail(1)` to select the second file and `get_resource()` to download it. The imported JSON file was a list of three lists, so I converted it to a data frame using the base R function `as.data.frame()`.
+
+```{r}
+# Import from open data toronto and convert to data frame
+elections <- 
+  list_package_resources("6b1a2631-9b12-4242-a76a-1a707b5c00e4") %>%
+  tail(1) %>% 
+  get_resource() %>% 
+  as.data.frame()
+```
+
+## Flattening and cleaning the data
+
+The output included a nested list in the column `office.candidates.ward`, which is common for JSON files. To flatten it into regular columns, I used `tidyr::unnest` to expand both rows and columns.
+
+Few more things I’ve done during the data cleaning process:
+
+- Remove unnecessary columns
+- Renamed the `name` and `num` variables to wardName and wardNum respectively, as their names appeared confusing after flattening the list-column
+- Converted all variables to numeric data type, except for the candidate name and ward name.
+
+```{r}
+# Flattening list-column to regular columns
+elections <- elections %>% 
+  unnest(office.candidate.ward)
+
+# Remove unnecessary columns and rename ward related columns
+elections <- elections %>% 
+  select(7:15) %>% 
+  rename(wardName = name,
+         wardNum = num)
+
+# Change data types to numeric except candidate and ward
+elections <- elections %>%
+  mutate(across(-c(office.candidate.name, wardName), as.numeric))
+```
+
+After cleaning the data, I used `str()` to verify the data structure.
+
+```{r}
+# Verify the updated data types
+str(elections)
+```
+
+Now the data frame looks much cleaner and is ready for some fun data wrangling!
+
+## Data wrangling to prepare for visualization
+
+Apparently, it is impossible to include all of the 102 candidates on the map. Instead, I wanted to show the top five candidates with the most votes in each ward. This can be achieved using `group_by()` and `slice_max()`. I first grouped the data by ward and candidates to create a variable `ward_votes` to sum the number of votes they received in each ward so that I can use it later for the visuals. Then, I grouped the data by ward again and used `slice_max()` to select the top five entries within each ward group.
+
+```{r}
+# Filter the top five candidates
+top_candidates <- elections %>%
+  group_by(wardName, office.candidate.name) %>% 
+  mutate(ward_votes = sum(votesReceived)) %>% 
+  group_by(wardName) %>% 
+  slice_max(ward_votes, n = 5)
+```
+
+I also wanted to know the candidate who received the most votes in each ward, so that I could map the district with a colour representing the candidate[^1]. Similarly to the previous step, I used `slice_max()` to find the winner.
+
+[^1]: I am aware that the municipal election is an indirect election, and the winner of the ward does not make any difference. However, for convenience, I will still refer to them as "the winner".
+
+```{r}
+# Get the winner for each ward
+ward_winner <- top_candidates %>% 
+  group_by(wardName) %>% 
+  slice_max(ward_votes)
+
+# Check the number of winners
+unique(ward_winner$office.candidate.name)
+```
+
+By checking the number of winners using `unique()`, I confirmed that either Chow or Bailão received the most votes in each of the 25 wards. I then defined their colours as purple and avocado, respectively, as they are the main colours of their websites.
+
+Lastly, I removed all other columns except for the ward and the `winner_colour`, as this data frame would be merged with the main data frame later.
+
+```{r}
+# Define colours for each winner
+ward_winner <- ward_winner %>%
+  mutate(winner_colour = if_else(
+    office.candidate.name == "Ana Bailão",
+    "#9dbd89",
+    "#a989bd")) %>%
+  select(wardName, winner_colour)
+```
+
+Here comes the hard part. For the text labels in the map, I wanted to display the ward name followed by the top five candidates and their corresponding votes. Needless to say, the information should be presented in multiple lines.
+
+However, when I created the map, it didn't process the `<br>` (line break) in the defined label as I expected. After some trial and error and internet search, I discovered that defining the text labels within the data frame and using `lapply(names, htmltools::HTML)` seemed to be the only feasible way to achieve the line break in leaflet map.
+
+Here are the steps to make it work.
+
+1. Get and arrange the candidate names. Since we have already identified the top five candidates, I simply grouped the data by ward and arranged the votes in descending order.
+2. Create the text labels. I created a variable called `names` and concatenated the candidate's name and their votes within each group. To ensure that the ward name appears only on the first line, I used an `ifelse` conditional statement to identify the first row (`row_number() == 1`). Simply pasting the ward name with the candidates' names wouldn't work, as the ward name would appear on each line.
+3. Fine-tune the labels. I added HTML styling such as `<b>` (bold) and `<br>` (line break) to improve the aesthetics. As mentioned earlier, we need to apply `htmltools::HTML` for leaflet to effectively process the HTML tags in the map.
+4. Similar to the `ward_winner` data frame, this data frame will also be merged later, so I only kept the ward name and the text label column. It also makes sense to removed other duplicate rows using `distinct()`, because the information is only meaningful at the ward level.
+
+```{r}
+names_label <- top_candidates %>%
+  group_by(wardName) %>%
+  arrange(desc(ward_votes)) %>%
+  mutate(names = ifelse(
+    row_number() == 1, 
+    paste("<b>", wardName, "</b><br>", paste(office.candidate.name, ":", votesReceived, collapse = "<br>")), 
+    paste(office.candidate.name, ":", votesReceived)), 
+    collapse = "<br>") %>%
+  mutate(names = lapply(names, htmltools::HTML)) %>%
+  distinct(wardName, .keep_all = TRUE) %>%
+  select(wardName, names)
+```
+
+Now it's time to load the shapefile for the geometry! It was my first time working with shapefiles, and it turned out to be quite straightforward. The city wards data can be downloaded [here](https://open.toronto.ca/dataset/city-wards/) from Open Data Toronto. The model is based on the 2018 election, and I believe there haven't been any changes since then. I used `sf::read_sf` to load the shapefile.
+
+```{r}
+to_shapes <- read_sf("Input/25-ward-model-december-2018-wgs84-latitude-longitude/WARD_WGS84.shp")
+```
+
+The last step of data wrangling was to create a merged data frame that included all the information I had collected. I did this by using multiple `left_join()` operations.
+
+Once I had the merged data frame `top_sf`, I converted it to an sf object so that the geometry information could be read properly.
+
+```{r}
+top_sf <- 
+  left_join(top_candidates, to_shapes,by = c("wardName" = "AREA_NAME")) %>% 
+  left_join(., ward_winner, by = "wardName") %>% 
+  left_join(., names_label, by = "wardName") %>% 
+  st_as_sf()
+```
+
+## Creating the interactive map with leaflet
+
+Finally, it's time to create the interactive map!
+
+Before creating the map, I defined the legend to indicate the candidate who received the most votes in each ward, representing the community preferences. I could utilize the previous data frames, but I got lazy and created a 2x2 tibble for the two candidates.
+
+```{r}
+# Define the legend
+legends <- tibble(lg_labels = c("Olivia Chow",
+                                "Ana Bailão"),
+                  lg_colours = c("#a989bd",
+                                 "#9dbd89"))
+```
+
+Creating a leaflet map is not very different from using `ggplot2`. The official documentation for R is not as detailed compared to `ggplot2`, but it still provides helpful information, and it also supports piping.
+
+Here are the steps to create the map with leaflet:
+
+1. Set the `leafletOptions()` to control the zoom level within a specified limit
+2. Use `addProviderTiles` to define the tile style for the map. The complete provider set can be viewed [here](http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
+3. Use `addPolygons` to map the appearance based on the data. The `fillColor` will represent the colour of the winner in each ward, and the `labels` will be the text labels we created. I also customized the polygons to create a semi-transparent map with a smooth white boundary
+4. Add the colour legend using `addLegend` and provide a title for the legend.
+5. Finally, print the map
+ 
+```{r}
+# Create the interactive map
+map <- leaflet(options = leafletOptions(minZoom = 10.5, maxZoom = 18)) %>% 
+  addProviderTiles("CartoDB.Positron") %>%
+  addPolygons(data = top_sf, fillColor = ~winner_colour,
+              fillOpacity = 0.2, color = "white", weight = 0.5, smoothFactor = 1,
+              label = ~names,
+              labelOptions = labelOptions(textsize = "12px")) %>%
+  addLegend(position = "bottomright", colors = legends$lg_colours,
+            labels = legends$lg_labels, title = "The candidate won the most votes")
+
+# Print the map
+map
+```
+
+Voilà! There it is!
+
+There were many steps to prepare before actually creating the map, but it was much easier to work with a clean and comprehensive data set instead of multiple data sets with different structures. I tried to incorporate multiple data sets into the map without joining them, but it didn't work and caused some incorrect mappings.
+
+Overall, I am very happy with the result. With this trial-and-error learning, I hope that the next time will be easier when it comes to the next election :).
+
+The complete R script is here:
+
+<script src="https://gist.github.com/aster-hu/c406864c31b07d3b914059d4a88d5236.js"></script>
+
+#### Reference
+
+Download the source data of Toronto 2023 mayoral by-election: 
+[Open Data Dataset - City of Toronto Open Data Portal](https://open.toronto.ca/dataset/by-election-results-unofficial/)
+
+Download the shape file for city wards: 
+[Open Data Dataset - City of Toronto Open Data Portal](https://open.toronto.ca/dataset/city-wards/)
+
+Working with JSON data: 
+[Working with JSON Data](https://shanghai.hosting.nyu.edu/data/r/working-with-json-data.html)
+
+Static 2018 Toronto municipal election maps: 
+[RPubs - 2018 Toronto municipal election maps](https://rpubs.com/grspur/tovote-maps-2018)
+
+Leaflet R documentation: 
+[Leaflet for R - Introduction](https://rstudio.github.io/leaflet/)
+
+Add line breaks in leaflet label: 
+[R and Leaflet: How to arrange label text across multiple lines - Stack Overflow](https://stackoverflow.com/questions/43144596/r-and-leaflet-how-to-arrange-label-text-across-multiple-lines)
