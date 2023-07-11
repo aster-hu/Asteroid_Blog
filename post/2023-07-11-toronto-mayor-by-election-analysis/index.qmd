@@ -189,7 +189,7 @@ Here are the steps to create the map with leaflet:
  
 ```{r}
 # Create the interactive map
-map <- leaflet(options = leafletOptions(minZoom = 10.5, maxZoom = 18)) %>% 
+map <- leaflet(options = leafletOptions(minZoom = 10, maxZoom = 18)) %>% 
   addProviderTiles("CartoDB.Positron") %>%
   addPolygons(data = top_sf, fillColor = ~winner_colour,
               fillOpacity = 0.2, color = "white", weight = 0.5, smoothFactor = 1,
