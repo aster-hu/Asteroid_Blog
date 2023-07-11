@@ -4,4 +4,4 @@ categories: [knitting]
 date: 2022-07-15
 ---
 
-![](baby-bear-hat.jpeg)
+![Baby bear hat](baby-bear-hat.jpeg)

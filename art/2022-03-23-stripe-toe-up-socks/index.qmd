@@ -4,4 +4,4 @@ categories: [knitting]
 date: 2022-03-23
 ---
 
-![](stripe-toe-up-socks.jpeg)
+![Stripe toe up socks](stripe-toe-up-socks.jpeg)

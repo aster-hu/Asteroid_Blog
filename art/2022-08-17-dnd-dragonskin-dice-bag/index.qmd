@@ -4,4 +4,4 @@ categories: [knitting]
 date: 2022-08-17
 ---
 
-![](dnd-dragonskin-dice-bag.JPG)
+![D&D dragonskin dice bag](dnd-dragonskin-dice-bag.JPG)

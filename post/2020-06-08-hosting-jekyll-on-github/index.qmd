@@ -4,7 +4,7 @@ date: 2020-06-08
 categories: [website, jekyll, tutorial, github, 2020]
 ---
 
-![](github_jekyll.jpg)
+![Github and jekyll](github_jekyll.jpg)
 
 ## Before Setup
 

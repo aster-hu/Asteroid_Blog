@@ -19,7 +19,7 @@ When I started blogging in 2020, I used Jekyll as my static site generator becau
 
 ## Hello, Quarto
 
-![](quarto.png)
+![Quarto](quarto.png)
 
 What is [Quarto](https://quarto.org)? To put it simple, it is a new format `.qmd` document that can be rendered to different output such as pdf, html, presentations, website, etc. It supports not only R, but also Python, Julia, and more.
 
@@ -92,7 +92,7 @@ My old blog used utterances for comments. I don't think it fits my most audience
 
 ## Build Quarto from Github Actions to Netlify
 
-![](quarto_ga_netlify.png)
+![Quarto + Github Action + Netlify](quarto_ga_netlify.png)
 
 Here is the workflow when I update my site:
 

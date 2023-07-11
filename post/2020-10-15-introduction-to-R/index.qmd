@@ -4,7 +4,7 @@ categories: [R, data, excel, 2020]
 date: 2020-10-15
 ---
 
-![](thumb.png)
+![Excel and R](thumb.png)
 
 ## What is R and why?
 
@@ -56,7 +56,7 @@ df <- read.xlsx('sample.xlsx',          # Name of the workbook
 
 Let's take a glimpse on the imported dataframe.
 
-![](sale_head.png)
+![Sales data frame](sale_head.png)
 
 ## Filter Columns
 

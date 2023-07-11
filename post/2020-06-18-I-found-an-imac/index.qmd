@@ -4,7 +4,7 @@ categories: [life, macos, hardware, 2020]
 date: 2020-06-18
 ---
 
-![](imac.JPG)
+![iMac](imac.JPG)
 
 ## A Mac in Garbage Suite?
 

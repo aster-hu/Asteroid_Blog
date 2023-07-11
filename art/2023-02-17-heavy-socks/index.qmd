@@ -4,4 +4,4 @@ categories: [knitting]
 date: 2023-02-17
 ---
 
-![](heavy-socks.jpg)
+![Heavy socks](heavy-socks.jpg)

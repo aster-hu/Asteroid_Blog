@@ -4,4 +4,4 @@ categories: [knitting]
 date: 2022-02-12
 ---
 
-![](hermiones-everyday-socks.jpeg)
+![Hermione's everyday socks](hermiones-everyday-socks.jpeg)

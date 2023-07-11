@@ -4,4 +4,4 @@ categories: [knitting]
 date: 2022-11-11
 ---
 
-![](gryffindor-house-scarf.JPG)
+![Gryffindor house scarf](gryffindor-house-scarf.JPG)

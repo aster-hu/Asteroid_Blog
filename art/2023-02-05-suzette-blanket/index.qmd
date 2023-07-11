@@ -4,4 +4,4 @@ categories: [crochet]
 date: 2023-02-05
 ---
 
-![](suzette-blanket.jpeg)
+![Suzette crochet blanket](suzette-blanket.jpeg)

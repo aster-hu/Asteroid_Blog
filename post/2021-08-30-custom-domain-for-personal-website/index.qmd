@@ -5,7 +5,7 @@ date: 2021-08-30
 toc: true
 ---
 
-![](namecheap.jpg)
+![Namecheap](namecheap.jpg)
 
 In the past year, I have been using Github's subdomain `github.io` for my personal website, and I finally decided to buy my custom domain – a domain that is registered by me. And I'm very lucky that my first+last name combination is still available.
 

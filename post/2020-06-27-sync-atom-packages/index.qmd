@@ -4,7 +4,7 @@ categories: [tutorial, atom, 2020]
 date: 2020-06-27
 ---
 
-![](atom.jpg)
+![Atom](atom.jpg)
 
 ::: {.callout-note}
 On June 8, 2022, Atom is offically shutdown by Github[^1].  

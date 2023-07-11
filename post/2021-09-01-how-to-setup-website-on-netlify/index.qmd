@@ -5,7 +5,7 @@ date: 2021-09-01
 toc: true
 ---
 
-![](white.png)
+![Netlify](white.png)
 
 ## Prerequisites
 

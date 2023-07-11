@@ -4,4 +4,4 @@ categories: [knitting]
 date: 2021-12-14
 ---
 
-![](one-row-scarf.jpeg)
+![One row scarf](one-row-scarf.jpeg)

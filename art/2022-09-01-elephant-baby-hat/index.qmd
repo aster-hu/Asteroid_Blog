@@ -4,4 +4,4 @@ categories: [knitting]
 date: 2022-09-01
 ---
 
-![](elephant-baby-hat.JPG)
+![Elephant baby hat](elephant-baby-hat.JPG)

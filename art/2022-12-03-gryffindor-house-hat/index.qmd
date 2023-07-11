@@ -4,4 +4,4 @@ categories: [knitting]
 date: 2022-12-03
 ---
 
-![](gryffindor-house-hat.JPG)
+![Gryffindor house hat](gryffindor-house-hat.JPG)

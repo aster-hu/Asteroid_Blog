@@ -5,7 +5,7 @@ categories: [website, jekyll, tutorial, 2020]
 description: Creating a static blog is easier than you think.
 ---
 
-![](Jekyll.png)
+![Jekyll](Jekyll.png)
 
 ## Install Jekyll
 
