@@ -51,8 +51,8 @@ The output included a nested list in the column `office.candidates.ward`, which 
 Few more things I’ve done during the data cleaning process:
 
 - Remove unnecessary columns
-- Renamed the `name` and `num` variables to wardName and wardNum respectively, as their names appeared confusing after flattening the list-column
-- Converted all variables to numeric data type, except for the candidate name and ward name.
+- Renamed the `name` and `num` variables to `wardName` and `wardNum` respectively, as their names appeared confusing after flattening the list-column
+- Converted all variables to numeric data type, except for the candidate name and ward name
 
 ```{r}
 # Flattening list-column to regular columns
@@ -81,7 +81,7 @@ Now the data frame looks much cleaner and is ready for some fun data wrangling!
 
 ## Data wrangling to prepare for visualization
 
-Apparently, it is impossible to include all of the 102 candidates on the map. Instead, I wanted to show the top five candidates with the most votes in each ward. This can be achieved using `group_by()` and `slice_max()`. I first grouped the data by ward and candidates to create a variable `ward_votes` to sum the number of votes they received in each ward so that I can use it later for the visuals. Then, I grouped the data by ward again and used `slice_max()` to select the top five entries within each ward group.
+Apparently, it is unrealistic to include all of the 102 candidates on the map. Instead, I wanted to show the top five candidates with the most votes in each ward. This can be achieved using `group_by()` and `slice_max()`. I first grouped the data by ward and candidates to create a variable `ward_votes` to sum the number of votes they received in each ward so that I can use it later for the visuals. Then, I grouped the data by ward again and used `slice_max()` to select the top five entries within each ward group.
 
 ```{r}
 # Filter the top five candidates
@@ -122,7 +122,7 @@ ward_winner <- ward_winner %>%
 
 Here comes the hard part. For the text labels in the map, I wanted to display the ward name followed by the top five candidates and their corresponding votes. Needless to say, the information should be presented in multiple lines.
 
-However, when I created the map, it didn't process the `<br>` (line break) in the defined label as I expected. After some trial and error and internet search, I discovered that defining the text labels within the data frame and using `lapply(names, htmltools::HTML)` seemed to be the only feasible way to achieve the line break in leaflet map.
+However, when I created the map, it didn't process the `<br>` (line break) in the defined label as I expected. After some trial and error and internet search, I discovered that defining the text labels within the data frame and using `lapply(names, htmltools::HTML)` seemed to be the only feasible way to display the line break in leaflet map.
 
 Here are the steps to make it work.
 
@@ -145,7 +145,7 @@ names_label <- top_candidates %>%
   select(wardName, names)
 ```
 
-Now it's time to load the shapefile for the geometry! It was my first time working with shapefiles, and it turned out to be quite straightforward. The city wards data can be downloaded [here](https://open.toronto.ca/dataset/city-wards/) from Open Data Toronto. The model is based on the 2018 election, and I believe there haven't been any changes since then. I used `sf::read_sf` to load the shapefile.
+Now we can load the shapefile for the geometry. It was my first time working with shapefiles, and it turned out to be quite straightforward. The city wards data can be downloaded [here](https://open.toronto.ca/dataset/city-wards/) from Open Data Toronto. The model is based on the 2018 election, and I believe there haven't been any changes since then. I used `sf::read_sf` to load the shapefile.
 
 ```{r}
 to_shapes <- read_sf("Input/25-ward-model-december-2018-wgs84-latitude-longitude/WARD_WGS84.shp")
@@ -183,8 +183,8 @@ Here are the steps to create the map with leaflet:
 
 1. Set the `leafletOptions()` to control the zoom level within a specified limit
 2. Use `addProviderTiles` to define the tile style for the map. The complete provider set can be viewed [here](http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
-3. Use `addPolygons` to map the appearance based on the data. The `fillColor` will represent the colour of the winner in each ward, and the `labels` will be the text labels we created. I also customized the polygons to create a semi-transparent map with a smooth white boundary
-4. Add the colour legend using `addLegend` and provide a title for the legend.
+3. Use `addPolygons` to map the appearance based on the data. The `fillColor` will represent the colour of the winner in each ward, and the `labels` will be the text labels we created. I also customized the polygons to make it semi-transparent with a smooth white boundary
+4. Add the colour legend and its title using `addLegend`
 5. Finally, print the map
  
 ```{r}
