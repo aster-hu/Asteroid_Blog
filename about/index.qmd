@@ -39,10 +39,11 @@ From my perspective, blogging is a systematic way of contemplation and reflectio
 - Metric/KRI development methodology
 - Process workflow improvement
 - Tooling efficiency
+- Personal productivity
 
 ### My toolbox
 
-- R (`dplyr`)
+- R (`tidyverse`)
 - Tableau
 - VBA/Excel/Power Query
 - Python
@@ -53,9 +54,6 @@ From my perspective, blogging is a systematic way of contemplation and reflectio
 - Read wikipedia
 - Google random questions
 - Knitting
-- Bullet journal/crafting
-- ~~Watercolour sketching~~
-- ~~Calligraphy~~
 - Dungeons & Dragons, video games
 
 Time management and productivity is a timeless topic.
