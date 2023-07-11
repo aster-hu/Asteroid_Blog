@@ -210,7 +210,10 @@ Overall, I am very happy with the result. With this trial-and-error learning, I 
 
 The complete R script is here:
 
+<details>
+<summary>Click to expland</summary>
 <script src="https://gist.github.com/aster-hu/c406864c31b07d3b914059d4a88d5236.js"></script>
+</details>
 
 #### Reference
 
