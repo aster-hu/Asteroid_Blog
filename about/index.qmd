@@ -1,12 +1,12 @@
 ---
 title: "Aster Hu"
-image: ./palette.JPG
+image: ./headphoto.jpg
 format:
   html:
     toc: false
 about:
   template: trestles
-  image-width: 10em
+  image-width: 20em
   links:
     - icon: envelope
       text: Email
