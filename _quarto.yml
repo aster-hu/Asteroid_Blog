@@ -6,7 +6,7 @@ website:
   description: "learning · programming · arts · random thoughts"
   site-url: "https://www.asterhu.com"
   google-analytics: "G-1E2YF2TSNE"
-  favicon: about/palette.png
+  favicon: about/favicon.ico
   page-footer:
     left: "This blog is built with ❤️ and [Quarto](https://quarto.org/). License: [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)."
     right:
@@ -21,7 +21,7 @@ website:
     background: "#83b7bb"
     foreground: "#FFFFFF"
     pinned: true
-    logo: about/palette.png
+    logo: about/favicon.ico
     left: 
       - text: "learning · programming · arts · random thoughts"
     right:
