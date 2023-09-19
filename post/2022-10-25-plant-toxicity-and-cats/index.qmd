@@ -3,9 +3,10 @@ title: "The truth about houseplants that are toxic to cats"
 categories: [life, 2022]
 date: 2022-10-25
 toc: true
+image: thumbnail.webp
 ---
 
-![Photo by <a href="https://unsplash.com/@hanako87?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hana Oliver</a> on <a href="https://unsplash.com/photos/1v6XhsH-w9U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>](hana-oliver-1v6XhsH-w9U-unsplash.jpg)
+![Photo by <a href="https://unsplash.com/@hanako87?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Hana Oliver</a> on <a href="https://unsplash.com/photos/1v6XhsH-w9U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>](hana-oliver-1v6XhsH-w9U-unsplash.webp)
 
 If you like plants, and you also have cats, you may have heard that many plants are poisonous to them.
 
