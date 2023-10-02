@@ -11,4 +11,4 @@ It's a simple colour palette with a thinker(or brain, whatever you call it) in t
 I really like it - it shows my love for both logic and art. Completely different perspective to interpret the world.
 
 
-![Rainbow Thinker](/about/palette.JPG)
+![Rainbow Thinker](/about/palette.webp)
