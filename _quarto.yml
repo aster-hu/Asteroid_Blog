@@ -29,7 +29,9 @@ website:
         href: about/index.qmd
       - text: Post
         href: post/
-      - text: Gallery
+      - text: Notes
+        href: https://notes.asterhu.com  
+      - text: Craft
         href: art/
       - text: Resources
         href: links/index.qmd
