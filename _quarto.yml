@@ -31,8 +31,6 @@ website:
         href: post/
       - text: Notes
         href: https://notes.asterhu.com  
-      - text: Craft
-        href: art/
       - text: Resources
         href: links/index.qmd
       - icon: rss
