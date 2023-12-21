@@ -24,22 +24,31 @@ After conducting some research, I've summarized the steps to resolve this error.
 Below is the simple version. Refer to the [the official documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for a more detailed explanation.
 
 1.  Open the Terminal app and paste the following code, replacing the email address.
-    \n
-    ```zsh
-       ssh-keygen -t ed25519 -C "your_github_email@email.com"
-    ```
-2.  Press Enter when it asks for the file location to save the key.
-    \n
-    ```zsh
-       > Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM): [Press enter]
-    ```
-3.  When asked for a passphrase, enter a password and press Enter. Repeat the password again when it asks the second time.
-    \n
-    ```zsh
-       > Enter passphrase (empty for no passphrase): [Type a passphrase]
-       > Enter same passphrase again: [Type passphrase again]
-    ```
-4.  It should generate some text that look like below. The path in the second line is the name and the location of the key. Take note of this information.
+
+\n
+
+```zsh
+ssh-keygen -t ed25519 -C "your_github_email@email.com"
+```
+
+1.  Press Enter when it asks for the file location to save the key.
+
+\n
+
+```zsh
+> Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM): [Press enter]
+```
+
+1.  When asked for a passphrase, enter a password and press Enter. Repeat the password again when it asks the second time.
+
+\n
+
+```zsh
+> Enter passphrase (empty for no passphrase): [Type a passphrase]
+> Enter same passphrase again: [Type passphrase again]
+```
+
+1.  It should generate some text that look like below. The path in the second line is the name and the location of the key. Take note of this information.
 
 \n
 
