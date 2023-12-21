@@ -2,7 +2,7 @@
 title: "Aster Hu's Blog"
 listing:
   - id: post
-    contents: post/*/*.qmd
+    contents: [post/*/*.qmd, post/*/*.md]
     sort: "date desc"
     type: default
     fields: [image, date, title, author, description, categories, reading-time]

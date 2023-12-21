@@ -2,7 +2,7 @@
 title: ""
 listing:
   - id: post
-    contents: "*/*.qmd"
+    contents: ["*/*.qmd", "*/*.md"]
     type: default
     image-height: 10em
     image-align: right
