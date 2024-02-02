@@ -14,5 +14,6 @@ _site/
 .AppleDouble
 .LSOverride
 /.quarto/
+/Static/ltximg
 
 /.luarc.json
