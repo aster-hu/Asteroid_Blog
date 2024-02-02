@@ -4,7 +4,7 @@ author: ["Aster Hu"]
 date: 2023-12-21T08:02:00-05:00
 categories: ["github", "tutorial", "toolkit", "macos", 2023]
 draft: false
-description: "How to automatically push changes to Github from a local machine."
+description: "How to set up SSH authentication and automatically push changes to Github from a local machine."
 image: "git_crontab_3.png"
 ---
 
@@ -25,51 +25,40 @@ Below is the simple version. Refer to the [the official documentation](https://d
 
 1.  Open the Terminal app and paste the following code, replacing the email address.
 
-\n
+    ```zsh
+    ssh-keygen -t ed25519 -C "your_github_email@email.com"
+    ```
+2.  Press Enter when it asks for the file location to save the key.
 
-```zsh
-ssh-keygen -t ed25519 -C "your_github_email@email.com"
-```
+    ```zsh
+    > Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM): [Press enter]
+    ```
+3.  When asked for a passphrase, enter a password and press Enter. Repeat the password again when it asks the second time.
 
-1.  Press Enter when it asks for the file location to save the key.
+    ```zsh
+    > Enter passphrase (empty for no passphrase): [Type a passphrase]
+    > Enter same passphrase again: [Type passphrase again]
+    ```
+4.  It should generate some text that look like below. The path in the second line is the name and the location of the key. Take note of this information.
 
-\n
-
-```zsh
-> Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM): [Press enter]
-```
-
-1.  When asked for a passphrase, enter a password and press Enter. Repeat the password again when it asks the second time.
-
-\n
-
-```zsh
-> Enter passphrase (empty for no passphrase): [Type a passphrase]
-> Enter same passphrase again: [Type passphrase again]
-```
-
-1.  It should generate some text that look like below. The path in the second line is the name and the location of the key. Take note of this information.
-
-\n
-
-```zsh
-Your identification has been saved in /Users/you/.ssh/id_ed12345
-Your public key has been saved in /Users/you/.ssh/id_ed12345.pub
-The key fingerprint is:
-SHA123:somerandomcharcters your_github_email@email.com
-The key's randomart image is:
-+--[ED12345 123]--+
-|E*==             |
-|..+ .            |
-|+xx=             |
-|.xxxo            |
-|xxx=..  S        |
-|o+=xxxxo         |
-|o.xxxxx          |
-|.+xxxxx          |
-| +=xxxx          |
-+----[SHA123]-----+
-```
+    ```zsh
+    Your identification has been saved in /Users/you/.ssh/id_ed12345
+    Your public key has been saved in /Users/you/.ssh/id_ed12345.pub
+    The key fingerprint is:
+    SHA123:somerandomcharcters your_github_email@email.com
+    The key's randomart image is:
+    +--[ED12345 123]--+
+    |E*==             |
+    |..+ .            |
+    |+xx=             |
+    |.xxxo            |
+    |xxx=..  S        |
+    |o+=xxxxo         |
+    |o.xxxxx          |
+    |.+xxxxx          |
+    | +=xxxx          |
+    +----[SHA123]-----+
+    ```
 
 
 ### Avoid entering passphrase everytime {#avoid-entering-passphrase-everytime}
@@ -107,7 +96,7 @@ pbcopy < ~/.ssh/id_ed12345.pub
 ```
 
 Navigate to your GitHub account and go to Github account **Setting - SSH and GPG keys - New SSH key**, and paste the key into the box.
-  [![](add_ssh.png)](add_ssh.png)
+  [![](add_ssh.png)](~/Library/CloudStorage/Dropbox/Code/Asteroid_Blog/post/2023-12-08-use-ssh-github-push-crontab/add_ssh.png)
 
 
 ## Step 3: Update remote origin to SSH {#step-3-update-remote-origin-to-ssh}
@@ -123,34 +112,27 @@ Last step before setting up cron job, we need to change the remote origin url in
 
 1.  In Terminal, use below sample code to navigate to the local git repository and verify the existing git remote url. If it shows the HTTPS url as below, continue the steps, otherwise, skip to Step 4.
 
-\n
-
-```zsh
-cd my/folder/path
-git remote -v
-# origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
-# origin  https://github.com/USERNAME/REPOSITORY.git (push)
-```
-
-1.  Go to the Github repository page, click the green **Code** button and select **SSH**, copy the remote url
+    ```zsh
+    cd my/folder/path
+    git remote -v
+    # origin  https://github.com/USERNAME/REPOSITORY.git (fetch)
+    # origin  https://github.com/USERNAME/REPOSITORY.git (push)
+    ```
+2.  Go to the Github repository page, click the green **Code** button and select **SSH**, copy the remote url<br />
     [![](ssh_remote_url.png)](ssh_remote_url.png)
-2.  In Terminal, use below code to update the remote from HTTPS to SSH. Replace the path with the url from the previous step.
+3.  In Terminal, use below code to update the remote from HTTPS to SSH. Replace the path with the url from the previous step.
 
-\n
+    ```zsh
+    git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+    ```
+4.  To verify, enter below code to confirm it has been switched to SSH remote url.
 
-```zsh
-git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
-```
-
-1.  To verify, enter below code to confirm it has been switched to SSH remote url.
-
-\n
-
-```zsh
-git remote -v
-# origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
-# origin  git@github.com:USERNAME/REPOSITORY.git (push)
-```
+    ```zsh
+        #+begin_src zsh
+    git remote -v
+    # origin  git@github.com:USERNAME/REPOSITORY.git (fetch)
+    # origin  git@github.com:USERNAME/REPOSITORY.git (push)
+    ```
 
 If you need more details, check [the official documentation](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories).
 
