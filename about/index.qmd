@@ -37,27 +37,26 @@ From my perspective, blogging is a systematic way of contemplation and reflectio
 - Exploratory and descriptive analysis
 - Intuitive dashboard design
 - Metric/KRI development methodology
-- Process workflow improvement
-- Tooling efficiency
-- Personal productivity
+- Process workflow improvement and tooling efficiency
 
 ### My toolbox
 
 - R (`tidyverse`)
 - Tableau
-- VBA/Excel/Power Query
+- VBA
 - Python
 - HTML/CSS
 
 ### Hobbies
 
-- Read wikipedia
-- Google random questions
 - Knitting
-- Dungeons & Dragons, video games
+- Explore new tools
+- Google random questions
+- Doodles
+- Dungeons & Dragons and RPG video games
 
 Time management and productivity is a timeless topic.
 
 ---
 
-the website icon is [drew by myself](/post/2021-08-15-palette-profile-photo/index.qmd).
+The website icon is [drew by myself](/post/2021-08-15-palette-profile-photo/index.qmd).
