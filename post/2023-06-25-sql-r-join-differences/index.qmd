@@ -1,6 +1,6 @@
 ---
 title: "The differences of left join in SQL and R"
-categories: [R, dplyr, SQL, handling-na, data, 2023]
+categories: [R, dplyr, SQL, data, 2023]
 description: How the two languages handle NA in joins differently
 date: 2023-06-26
 image: sql_r.png

@@ -1,7 +1,7 @@
 ---
 title: Customize Website Colour Themes in Jeykll
 date: 2020-06-10
-categories: [html/css, jekyll, 2020]
+categories: [jekyll, 2020]
 ---
 
 [![Lanyon theme](lanyon.png)](https://github.com/poole/lanyon)

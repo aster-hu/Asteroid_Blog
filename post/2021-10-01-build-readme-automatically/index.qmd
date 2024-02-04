@@ -1,6 +1,6 @@
 ---
 title: "How to Create a Dynamic Github Profile"
-categories: [tutorial, python, career, github-action, 2021]
+categories: [tutorial, python, 2021]
 date: 2021-10-01
 toc: true
 ---
