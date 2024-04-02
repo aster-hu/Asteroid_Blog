@@ -7,7 +7,7 @@
     href="https://unpkg.com/@waline/client@v2/dist/waline.css"
   />
   <!-- Add umami tracking code -->
-  <script async src="https://umami-six-sand.vercel.app/custom" data-website-id="ea8c325a-a39c-45ad-9d2f-0485b3249348"></script>
+  <script defer src="https://umami-db-pi.vercel.app/custom" data-website-id="226aa2e0-95c8-4114-be92-0dc1755fcce4"></script>
 
 </head>
 <body>
@@ -19,6 +19,7 @@
     init({
       el: '#waline',
       serverURL: 'aster-waline-comment.vercel.app',
+      path: window.location.pathname.replace(/index\.html$/, ''),
       lang: 'en',
       reaction: [
     'https://unpkg.com/@waline/emojis@1.1.0/tw/1f44d.png',
