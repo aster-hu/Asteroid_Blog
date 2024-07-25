@@ -10,7 +10,7 @@ image: "domenico-loia-EhTcC9sYXsw-unsplash.webp"
 
 ## Inspiration {#inspiration}
 
-The inspiration comes from a [Github project](https://defaults.rknight.me/), which introduces the main software of the year. Anyways, below are my app defaults as of January 2024.
+The inspiration comes from a [Github project](https://defaults.rknight.me/), which introduces the main software of the year. Anyways, below are my app defaults as of July 2024.
 
 
 ## List of app defaults {#list-of-app-defaults}
