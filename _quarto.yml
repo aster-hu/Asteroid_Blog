@@ -30,7 +30,9 @@ website:
       - text: Post
         href: post/
       - text: Notes
-        href: https://notes.asterhu.com  
+        href: https://notes.asterhu.com
+      - text: Purling Thoughts
+        href: https://thoughts.asterhu.com
       - text: Resources
         href: links/index.qmd
       - icon: rss
