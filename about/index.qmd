@@ -25,19 +25,29 @@ about:
 
 ### Aloha!
 
-I'm a senior analyst working at TD Bank in Toronto, Canada. My job focuses on data oversight and lifecycle management; I write code for my work, but mostly just for fun.
+I work in Data Risk Management as Manager, Data Risk Intelligence & Reporting in the banking industry, where I design Key Risk Indicators (KRIs) methodologies at the enterprise level and also oversee risk measures created by the first-line business partners. While I occasionally write code for work, I mostly code for fun — it’s a hobby, so is knitting <br>˚˖ִ໋🧶✧˚🪡.⋆
 
-Not a hardcore developer per se as I don't come with the Computer Science background, but I think anyone with the desire to learn can benefit from technology because it's so awesome.
+I’m not a hardcore developer by any means; I don’t have a Computer Science background or any formal training in programming. I learned the most through hands-on practice and I firmly believe that anyone with a desire to learn can gain so much from technology — it’s truly amazing.
 
-From my perspective, blogging is a systematic way of contemplation and reflection, and I need this reason to push myself to incorporate the learning into my routine, otherwise I would lost track of it. Besides, static websites looks fantastic and, in my opinion, are a much more elegant solution than WordPress.
+For me, blogging is a way to reflect and organize my thoughts systematically. It helps me stay consistent with learning, which I might otherwise lose track of. Plus, I think static websites are fantastic—they look great and, in my opinion, are a much more elegant solution than WordPress.
+
+Keep calm and stay sharp!
+
+#### My blogs
+- **[Asteroid](../)**  
+(This one) My main blog, mostly technical related contents
+- [**Purling Thoughts**](https://thoughts.asterhu.com)  
+A diary-like blog where I dump my random thoughts
+- [**🪴 Aster's notebook**](https://notes.asterhu.com)  
+My personal wiki (or digital garden, whatever you want to call it)
 
 ### Interests
 
-- Efficient data cleaning and manipulation
-- Exploratory and descriptive analysis
-- Intuitive dashboard design
 - Metric/KRI development methodology
 - Process workflow improvement and tooling efficiency
+- Efficient data cleaning and manipulation
+- Intuitive dashboard design
+- Exploratory and descriptive analysis
 
 ### My toolbox
 
@@ -50,12 +60,13 @@ From my perspective, blogging is a systematic way of contemplation and reflectio
 ### Hobbies
 
 - Knitting
+- Blogging
+- Emacs org-mode
+- Podcast
 - Explore new tools
-- Google random questions
 - Doodles
 - Dungeons & Dragons and RPG video games
 
-Time management and productivity is a timeless topic.
 
 ---
 
