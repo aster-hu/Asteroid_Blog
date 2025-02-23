@@ -1,22 +1,52 @@
 ---
 title: "Aster Hu's Blog"
+description: ""
+toc: false
 listing:
-  - id: post
-    contents: [post/*/*.qmd, post/*/*.md]
-    sort: "date desc"
-    type: default
-    fields: [image, date, title, author, description, categories, reading-time]
-    image-height: 10em
-    image-align: right
-    categories: cloud
-    page-size: 10
-    feed:  
-      categories: 
-        - R
-page-layout: full
-title-block-banner: false
-toc-location: left
+  - id: front-list
+    contents: 
+      - front_page/front_post.yaml
+      - front_page/front_thoughts.yaml
+
+      - front_page/front_notebook.yaml
+      - front_page/front_py.yaml
+      - front_page/front_link.yaml
+    sort: "order"
+    type: grid
+    grid-columns: 5
+    categories: false
+    image-height: '15em'
+format:
+  html:
+    page-layout: full
 ---
 
-::: {#post}
+<!-- ::: {.grid} -->
+
+<!-- ::: {.g-col-12} -->
+Welcome to my blog️!
+
+I'm a knitter, blogger, and a full-time data risk management professional. Check out my various blog contents below:
+
+::: {#front-list}
 :::
+
+<!-- ::: -->
+
+<!-- ::: -->
+<br><br><br><br><br><br><br><br>
+
+
+
+<ul style="color: grey; font-size:13px;">
+  
+Credit
+
+- Photo by <a href="https://unsplash.com/@andrewtneel?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrew Neel</a> on <a href="https://unsplash.com/photos/macbook-pro-white-ceramic-mugand-black-smartphone-on-table-cckf4TsHAuw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+
+- Photo by <a href="https://unsplash.com/@tomhermans?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Tom Hermans</a> on <a href="https://unsplash.com/photos/book-lot-on-table-9BoqXzEeQqM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+- <a href="https://www.flaticon.com/free-stickers/creativity" title="creativity stickers">Creativity stickers created by Stickers - Flaticon</a>
+
+</ul>

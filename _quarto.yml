@@ -3,12 +3,12 @@ project:
 
 website:
   title: "Aster Hu's Blog | Asteroid"
-  description: "learning · programming · arts · random thoughts"
+  description: "My blog about learning, thinking, knitting, programming"
   site-url: "https://www.asterhu.com"
   google-analytics: "G-1E2YF2TSNE"
   favicon: about/favicon.ico
   page-footer:
-    left: "This blog is built with ❤️ and [Quarto](https://quarto.org/). License: [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)."
+    left: "This blog is built with ❤️ and [Quarto](https://quarto.org/). Copyright © 2020-2025 Aster Hu. All rights reserved."
     right:
       - icon: rss
         href: index.xml
@@ -22,19 +22,19 @@ website:
     foreground: "#FFFFFF"
     pinned: true
     logo: about/favicon.ico
-    left: 
-      - text: "learning · programming · arts · random thoughts"
     right:
+      - text: "learning · thinking · knitting · programming"
+    left:
       - text: About 
         href: about/index.qmd
       - text: Post
         href: post/
-      - text: Notes
+      - text: Thoughts
+        href: thoughts/
+      - text: Notebook
         href: https://notes.asterhu.com
-      - text: Purling Thoughts
-        href: https://thoughts.asterhu.com
-      - text: Resources
-        href: links/index.qmd
+      - text: Knitting
+        href: https://purringyarn.netlify.app
       - icon: rss
         text: "RSS Subscribe"
         href: index.xml

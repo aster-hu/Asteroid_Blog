@@ -1,0 +1,14 @@
+---
+title: "Thoughts"
+listing:
+  - id: thoughts
+    contents: ["*.qmd", "*.md"]
+    type: table
+    fields: [date, title, categories]  
+    sort: "date desc"
+    categories: cloud
+    sort-ui: [date, categories]
+    filter-ui: true
+    page-size: 10
+page-layout: full
+---

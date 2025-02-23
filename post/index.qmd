@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Post"
 listing:
   - id: post
     contents: ["*/*.qmd", "*/*.md"]
@@ -12,6 +12,9 @@ listing:
     sort-ui: [date, categories]
     filter-ui: true
     page-size: 10
+    feed:  
+      categories: 
+        - R
 page-layout: full
 ---
 

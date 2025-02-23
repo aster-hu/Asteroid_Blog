@@ -1,0 +1,26 @@
+<% for (const item of items) { %>
+<div class="quarto-post image-right">
+<div class="body">
+<% if (item.url) { %>
+<a href="<%-item.url%>">
+<h4> <%-item.title%> </h4>
+</a>
+<% } else { %>
+<h4> <%-item.title%> </h4>
+<% } %>
+
+<p> <%-item.description%> </p>
+</div>
+<div class="thumbnail">
+<% if (item.url) { %>
+<a href="<%-item.url%>">
+<img src="<%-item.image%>" class="thumbnail-image">
+</a>
+<% } else { %>
+<img src="<%-item.image%>" class="thumbnail-image">
+<% } %>
+
+</div>
+</div>
+
+<% } %>

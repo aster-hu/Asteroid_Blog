@@ -1,0 +1,17 @@
+{
+  "hash": "a9ed54446b85e9649769929415c1c647",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\ndescription: \"Home page for the Computational Cognition Lab at Brooklyn College, run by Matt Crump\"\nimage: img/youtube.png\ntoc: false\nlisting:\n  - id: front-list\n    contents: \n      - front_page/front_post.yaml\n      - front_page/front_thoughts.yaml\n      - front_page/front_page.yaml\n      - front_page/front_notebook.yaml\n      - links/index.qmd\n    sort: \"order\"\n    type: grid\n    grid-columns: 3\n    categories: false\n    image-align: 'right'\n    image-height: '100%'\nformat:\n  html:\n    page-layout: full\n---\n\n\n\n::: {.cell}\n<style type=\"text/css\">\n.quarto-title {\n    display: none;\n  }\n  \n.description {\n    display: none;\n  }\n  \ndiv.quarto-post .metadata {\n    display: none;\n  }\n  \ndiv.quarto-post .thumbnail {\n    flex-basis: 50%;\n}\n\np {\n    max-width: 100%;\n}\n\n</style>\n:::\n\n\n\n\n\nThe Computational Cognition Lab at Brooklyn College of CUNY investigates learning, memory, attention, performance, and semantic cognition.\n\n[Current and previous lab members](https://crumplab.github.io/People.html) include undergraduate, master's , doctoral, and postdoctoral researcher associates.\n\nThe lab is located in the [Department of Psychology](http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology.php) at [Brooklyn College of CUNY](http://www.brooklyn.cuny.edu/), and affiliated with the [Cognitive and Comparative Psychology Training area](https://ccp-cuny.github.io) of the [Psychology Doctoral program at the Graduate Center of CUNY](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Training-Areas/Cognitive-and-Comparative-Psychology).\n\n## Pages\n\n::: {#front-list}\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
