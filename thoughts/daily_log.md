@@ -1,7 +1,7 @@
 ---
 title: "Having a daily log?"
 date: 2025-01-21T23:49:00-05:00
-tags: ["blogging"]
+categories: ["blogging"]
 draft: false
 ---
 
