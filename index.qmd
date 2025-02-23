@@ -19,6 +19,7 @@ listing:
 format:
   html:
     page-layout: full
+    link-external-icon: false
 ---
 
 <!-- ::: {.grid} -->
