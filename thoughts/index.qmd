@@ -10,5 +10,6 @@ listing:
     sort-ui: [date, categories]
     filter-ui: true
     page-size: 10
+    feed: true
 page-layout: full
 ---
