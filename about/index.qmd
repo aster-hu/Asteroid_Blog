@@ -35,16 +35,16 @@ Keep calm and stay sharp!
 
 #### My blogs
 - **[Asteroid](../)**  
-(This one) My main blog, mostly technical related contents
-- [**Purling Thoughts**](https://thoughts.asterhu.com)  
-A diary-like blog where I dump my random thoughts
+(This one) My main blog, including both technical related contents and random thoughts
 - [**🪴 Aster's notebook**](https://notes.asterhu.com)  
 My personal wiki (or digital garden, whatever you want to call it)
+- [**Purring Yarn**](https://purringyarn.netlify.app)  
+A knitting blog I built recently, where I share my knitting project walk-though, customized pattern design, etc.
 
 ### Interests
 
 - Metric/KRI development methodology
-- Process workflow improvement and tooling efficiency
+- Operational workflow improvement and tooling efficiency
 - Efficient data cleaning and manipulation
 - Intuitive dashboard design
 - Exploratory and descriptive analysis
@@ -63,7 +63,6 @@ My personal wiki (or digital garden, whatever you want to call it)
 - Blogging
 - Emacs org-mode
 - Podcast
-- Explore new tools
 - Doodles
 - Dungeons & Dragons and RPG video games
 
