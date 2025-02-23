@@ -16,6 +16,7 @@ listing:
     grid-columns: 5
     categories: false
     image-height: '15em'
+    feed: true
 format:
   html:
     page-layout: full
