@@ -1,0 +1,13 @@
+# Options specified here will apply to all posts in this folder
+
+# Enable banner style title blocks
+title-block-banner: false
+
+# Table of content settings
+toc: true
+
+page-layout: article
+
+format:
+  html:
+    include-after-body: ../footer.html
