@@ -1,7 +1,7 @@
 ---
 title: "A new chapter"
 date: 2024-10-29T22:00:00-04:00
-categories: ["blog"]
+categories: ["blogging"]
 draft: false
 ---
 
