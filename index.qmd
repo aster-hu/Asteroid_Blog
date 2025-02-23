@@ -1,13 +1,12 @@
 ---
 title: "Aster Hu's Blog"
-description: ""
+description: "A blog about learning, thinking, knitting, programming"
 toc: false
 listing:
   - id: front-list
     contents: 
       - front_page/front_post.yaml
       - front_page/front_thoughts.yaml
-
       - front_page/front_notebook.yaml
       - front_page/front_py.yaml
       - front_page/front_link.yaml
@@ -26,9 +25,9 @@ format:
 <!-- ::: {.grid} -->
 
 <!-- ::: {.g-col-12} -->
-Welcome to my blog️!
+Welcome to my blog️! I'm a knitter, blogger, and a full-time data risk management professional. 
 
-I'm a knitter, blogger, and a full-time data risk management professional. Check out my various blog contents below:
+Check out my various blog contents below:
 
 ::: {#front-list}
 :::
