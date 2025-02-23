@@ -35,9 +35,13 @@ website:
         href: https://notes.asterhu.com
       - text: Knitting
         href: https://purringyarn.netlify.app
-      - icon: rss
-        text: "RSS Subscribe"
-        href: index.xml
+      -  text: "RSS Subscribe"
+         icon: rss
+         menu:
+           - text: RSS - Post
+             url: /post/index.xml
+           - text: RSS - Thoughts
+             url: /thoughts/index.xml
     backgroundcolor: "#faf8f8"
     tools:
       - icon: github
