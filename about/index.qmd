@@ -38,7 +38,7 @@ Keep calm and stay sharp!
 (This one) My main blog, including both technical related contents and random thoughts
 - [**🪴 Aster's notebook**](https://notes.asterhu.com)  
 My personal wiki (or digital garden, whatever you want to call it)
-- [**Purring Yarn**](https://purringyarn.netlify.app)  
+- [**Purring Yarn**](https://purringyarn.pages.dev)  
 A knitting blog I built recently, where I share my knitting project walk-though, customized pattern design, etc.
 
 ### Interests
