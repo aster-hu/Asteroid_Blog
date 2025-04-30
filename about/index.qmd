@@ -41,9 +41,9 @@ My personal wiki (or digital garden, whatever you want to call it)
 - [**Purring Yarn**](https://purringyarn.pages.dev)  
 A knitting blog I built recently, where I share my knitting project walk-though, customized pattern design, etc.
 
-### Interests
+### Current Skill Focus
 
-- Metric/KRI development methodology
+- Risk metric/KRI development methodology
 - Operational workflow improvement and tooling efficiency
 - Efficient data cleaning and manipulation
 - Intuitive dashboard design
@@ -53,8 +53,9 @@ A knitting blog I built recently, where I share my knitting project walk-though,
 
 - R (`tidyverse`)
 - Tableau
-- VBA
 - Python
+- Power BI
+- VBA, Excel, Power Query
 - HTML/CSS
 
 ### Hobbies
