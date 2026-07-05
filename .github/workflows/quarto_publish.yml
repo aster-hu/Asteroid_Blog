@@ -15,15 +15,15 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: 1.4.449
+          version: 1.6.41
 
       - name: Render Quarto Website
         uses: quarto-dev/quarto-actions/render@v2
         with:
           to: html
-          
+
       - name: Add Netlify redirects and configuration
-        run: mv _redirects netlify.toml _site  # Move the _redirects and netlify configuration file to _site folder
+        run: mv _redirects netlify.toml _site # Move the _redirects and netlify configuration file to _site folder
 
       - name: Publish without render
         uses: quarto-dev/quarto-actions/publish@v2
