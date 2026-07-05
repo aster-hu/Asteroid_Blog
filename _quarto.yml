@@ -33,8 +33,6 @@ website:
         href: thoughts/
       - text: Notebook
         href: https://notes.asterhu.com
-      - text: Knitting
-        href: https://purringyarn.pages.dev
       - text: "RSS Subscribe"
         icon: rss
         menu:

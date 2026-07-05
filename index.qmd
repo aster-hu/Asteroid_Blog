@@ -8,7 +8,7 @@ listing:
       - front_page/front_post.yaml
       - front_page/front_thoughts.yaml
       - front_page/front_notebook.yaml
-      - front_page/front_py.yaml
+      # - front_page/front_py.yaml
       - front_page/front_link.yaml
     sort: "order"
     type: grid
